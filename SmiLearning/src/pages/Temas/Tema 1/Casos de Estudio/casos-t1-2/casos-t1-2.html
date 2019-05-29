@@ -1,0 +1,53 @@
+<!--
+  Generated template for the CasosT1_2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>Casos-T1-2</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+  <ion-card>
+
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg" />
+      <ion-card-title class="card-title">Anatomia Microscópica</ion-card-title>
+      <p class="card-subtitle"><strong>Epitelio queratinizado.</strong> Además de las células de las células productoras
+        de
+        queratina, que comprenden alrededor del 90% del total de la población celular, el epitelio bucal contiene los
+        tres tipos de células:</p>
+      <br />
+      <img class="card-img" src="../../../../../assets/imgs/Figuras patología/Figura 1-17.jpg">
+      <br />
+      <div class="card-item">
+        <p class="card-subtitle"><strong>1.</strong> Malanocitos.</p>
+        <br />
+        <p class="card-subtitle"><strong>2.</strong> Celulas de Langerhans.</p>
+        <br />
+        <p class="card-subtitle"><strong>3.</strong>Las células de los tres tipos son estrelladas y tienen
+          prolongaciones citoplasmáticas de
+          distintos tamaños y aspectos.</p>
+      </div>
+      <br />
+      <p class="card-subtitle">Las células de los tres tipos son estrelladas y tienen prolongaciones citoplasmáticas de
+        distintos tamaños y aspectos.</p>
+      <br />
+      <p class="card-subtitle">A estas células también llamadas “células claras” (fechas), en
+        cortes histológicos se ven más claras, que las células circundantes productoras de queratina.</p>
+    </ion-card-content>
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" color="green" (click)="aNotas(1,13)"
+          [disabled]="!srv.validateTopic(ch1, 12)">Notas</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

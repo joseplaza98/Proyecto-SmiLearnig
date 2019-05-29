@@ -1,0 +1,111 @@
+<!--
+  Generated template for the AnalisisClinCap4Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>analisisClinCap4</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/Inicio1.jpeg" />
+      <ion-card-title class="card-title">
+        Correlación clínico-Histopatológica en la enfermedad peridontal inflamatoria crónica.
+      </ion-card-title>
+
+      <p class="card-subtitle">
+        Pacientes seleccionados <strong>(ausencia de enfermedades sistemicas)</strong> en el departamento de
+        patología bucal, facultad de odontología con diagnostico clínico de gravitis crónica
+        y periodontitis, con la finalidad de conocer los principales cambios que se producen
+        en el epitelio y lamina propia.
+      </p>
+    </ion-card-content>
+
+      <ion-card-content *ngIf="ocultar1">
+        <div class="card-item">
+          <p class="card-subtitle"><strong>1.</strong> El análisis de las muestras de biopsias obtenidas demostró la alta correspondencia del
+            diagnóstico clínico, y los hallazgos histomorfologicos encontrados, lo cual corrobora una serie de estudios
+            realizados a nivel mundial.
+          </p>
+          <br />
+          <p class="card-subtitle"><strong>2.</strong> Las características clínicas observadas en la gengivitis y periodontitis, se realizan
+            mediante diferentes técnicas histomorfologicas, mediante las cuales es posible detallar las alteraciones que se
+            producen al interior de los tejidos gingivales, según el grado de reacción inflamatoria.</p>
+          <br />
+          <p class="card-subtitle">Múltiples autores coinciden que existe una correlación entre el diagnóstico clínico y el histopatológico, y
+            la biopsia es la forma más común, los cuales ayudan a corroborar el diagnóstico presuntivo expresado en los
+            cambios clínicos. </p>
+        </div>
+      </ion-card-content>
+
+<ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" (click)="accion1()">
+          {{ !ocultar1 ? 'Ver más' : 'Ver Menos' }}
+          <!-- <button ion-button round (click)="aSubt1Macro()">Ver Tema</button> -->
+        </button>
+
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-content>
+      <img src="../../../../assets/imgs/PagPrinc3.jpg" />
+      <ion-card-title style="text-align:justify; font-weight: bold">
+        Descripción histológica
+      </ion-card-title>
+      <p style="text-align:justify">
+        Mediante técnica de coloración Pas, se realiza observaciones correspondientes
+        con coloración convencional de hematoxilina – eosina para determinar el estado del epitelio,
+        la densidad del infiltrado inflamatorio, con células predominantes con infiltrado
+        inflamatorio, con alteraciones en la membrana basal.
+      </p>
+
+    </ion-card-content>
+
+    <ion-card-content *ngIf="ocultar2">
+      <div class="card-item">
+        <p class="card-subtitle"><strong>1.</strong> Las láminas se evaluaron por un solo investigador con el microscopio binocular Olympus
+          para establecer criterios de criterios definitivos.
+        </p>
+        <br />
+        <p class="card-subtitle"><strong>2.</strong> Cuando la inflamación es moderada, se observa mayor número de plasmocitos que invaden el
+          tejido conectivo y el epitelio de unión desarrolla prolongaciones hacia el tejido conectivo y el epitelio de unión con destrucción
+          de fibras colágenas intactas y células del infiltrado inflamatorio.
+        </p>
+        <br />
+        <p class="card-subtitle"><strong> 3. </strong> Los criterios de grosor del epitelio, displasia, integridad de la membrana basal,
+          hiperplasia de tejido conectivo.
+        </p>
+      </div>
+    </ion-card-content>
+
+
+
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" style="align-content: flex" (click)="accion2()">
+          {{ !ocultar2 ? 'Ver más' : 'Ver Menos' }}
+          <!-- <button ion-button round (click)="aSubt1Macro()">Ver Tema</button> -->
+        </button>
+        <button ion-button outline round color="green" (click)="aSeccionAnexo1Cap4()">Ver anexo </button>
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,46 @@
+<!--
+  Generated template for the LibrosConsultaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>libros-consulta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title class="card-title">SEGMENTO I</ion-card-title>
+      <p class="card-subtitle">Lista de libros Periodoncia; Jhan Lindhe, padre de la Periodoncia.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let item of Libros1">
+    <ion-card-content>
+      <img src="{{item.img}}">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title class="card-title">SEGMENTO II</ion-card-title>
+      <p class="card-subtitle">Publicación de Journal (Revisiones de literatura).
+        Bases de Datos.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let item of Libros2">
+    <ion-card-content>
+      <img src="{{item.img}}">
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

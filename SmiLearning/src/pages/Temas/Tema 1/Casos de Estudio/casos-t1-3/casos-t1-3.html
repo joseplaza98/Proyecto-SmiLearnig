@@ -1,0 +1,34 @@
+<!--
+  Generated template for the CasosT1_3Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>CasosT1_3Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg" />
+      <ion-card-title class="card-title">Epitelio dentogingival</ion-card-title>
+      <p class="card-subtitle">Los componentes tisulares de la región dentogingival alcanzan sus características en
+        conjunción con la erupción de los dientes.</p>
+        <br/>
+        <img class="card-img" src="../../../../../assets/imgs/Figuras patología/Figura 1-28.jpg">
+    </ion-card-content>
+    
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" color="green" (click)="aNotas(1,15)" [disabled]="!srv.validateTopic(ch1, 14)">Notas</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

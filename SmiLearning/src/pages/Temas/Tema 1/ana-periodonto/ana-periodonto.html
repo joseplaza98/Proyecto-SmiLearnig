@@ -1,0 +1,418 @@
+<!--
+  Generated template for the AnaPeriodontoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>AnaPeriodonto</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="intro" color="paua">
+      <ion-segment-button value="defin">
+        Definicion
+      </ion-segment-button>
+      <ion-segment-button value="macro" (click)="progress(1,4)" [disabled]="!srv.validateTopic(ch1, 3)">
+        Macro
+      </ion-segment-button>
+      <ion-segment-button value="micro" (click)="progress(1,9)" [disabled]="!srv.validateTopic(ch1, 8)">
+        Micro
+      </ion-segment-button>
+      <ion-segment-button value="otros" (click)="progress(1,16)" [disabled]="!srv.validateTopic(ch1, 15)">
+        Más temas
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="fondo">
+  <div [ngSwitch]="intro">
+    <ion-list *ngSwitchCase="'defin'">
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg" />
+          <ion-card-title class="card-title">Encía papilar</ion-card-title>
+          <p class="card-subtitle">Es aquella parte de la encía que ocupa los espacios interproximales entre la
+            superficie de contacto de los dientes y la porción más coronal del hueso alveolar.</p>
+        </ion-card-content>
+        <ion-card-content *ngIf="ocultar1">
+          <p class="card-subtitle">La encía papilar está formada por dos estructuras en forma
+            piramidal, las papilas interdentales, una vestibular y la otra palatina o lingual, unidas entre sí por una
+            depresión en forma de silla de montar denominada Col, el cual ha sido observado en zona de premolares y
+            molares y se pierde en zonas de dientes anteriores.</p>
+          <br />
+          <p class="card-subtitle">Esta zona se caracteriza por la falta de queratinización del
+            epitelio, lo que la hace susceptible a la enfermedad periodontal.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion1(1,1)">
+              {{ !ocultar1 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg" />
+          <ion-card-title class="card-title">Encía adherida</ion-card-title>
+          <p class="card-subtitle">Está constituida por tejido conectivo fibroso denso dispuesto regularmente,
+            firmemente anclado a la superficie del hueso alveolar y cemento radicular y tapizada por epitelio escamoso
+            estratificado queratinizado.</p>
+        </ion-card-content>
+        <ion-card-content *ngIf="ocultar2">
+          <p class="card-subtitle">La encía adherida, en la superficie externa puede limitarse
+            claramente, cuando es evidente el surco marginal, extendiéndose hasta la unión mucogingival donde se
+            continúa con la mucosa alveolar.</p>
+          <br />
+          <p class="card-subtitle">Tiene un color rosa coral, y suele mostrar un punteado delicado
+            que le da aspecto de cascara de naranja.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion2(1,2)"
+              [disabled]="!srv.validateTopic(ch1, 1)">
+              {{ !ocultar2 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg" />
+          <ion-card-title class="card-title">Límite Externo</ion-card-title>
+          <p class="card-subtitle">Se extiende desde el margen hasta la línea mucogingival y se ha denominado encía.
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg" />
+          <ion-card-title class="card-title">Encía</ion-card-title>
+          <p class="card-subtitle">La encía se define como el tejido cubierto por epitelio que recubre el proceso
+            alveolar y rodea la porción cervical de los dientes, ésta se continúa con el ligamento periodontal y con el
+            resto de la mucosa de la cavidad oral.</p>
+        </ion-card-content>
+        <ion-card-content *ngIf="ocultar3">
+          <p class="card-subtitle">Por sus características histológicas, la encía también ha sido
+            denominada encía queratinizada y se divide por sus características estructurales en encía marginal o
+            libre,
+            encía papilar y encía adherida.</p>
+          <br />
+          <p class="card-subtitle">Las funciones son de protección a estímulos, a fuerzas mecánicas,
+            externas y físicas, así como constituye una parte importante en la estética facial.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion3(1,3)"
+              [disabled]="!srv.validateTopic(ch1, 2)">
+              {{ !ocultar3 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg" />
+          <ion-card-title class="card-title">Encía marginal o libre</ion-card-title>
+          <p class="card-subtitle">Rodea el cuello de los dientes, desde el margen gingival hasta una pequeña hendidura
+            o surco marginal libre, que la separa de la encía insertada. Tiene un tamaño constante de alrededor de 1 mm.
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'macro'">
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Anatomía Macroscópica</ion-card-title>
+          <p class="card-subtitle">La mucosa bucal (membrana mucosa) se continúa con la piel de los labios y con la
+            mucosa del paladar blando y la faringe. La membrana mucosa se compone de:</p>
+          <br />
+          <div class="card-item">
+            <p class="card-subtitle"><strong>1.</strong> Mucosa masticatoria que incluye la encía y el recubrimiento del
+              paladar duro.</p>
+            <br />
+            <p class="card-subtitle"><strong>2.</strong> La mucosa especializada cubre el dorso de la lengua.</p>
+            <br />
+            <p class="card-subtitle"><strong>3.</strong> La parte restante, llamada mucosa tapizante.</p>
+          </div>
+        </ion-card-content>
+
+        <ion-card-content *ngIf="ocultar5">
+          <p class="card-subtitle">La encía es parte de la mucosa masticatoria que recubre la apófisis
+            alveolar y rodea la porción cervical de los dientes. La encía adquiere su forma y textura con la erupción
+            dentaria.</p>
+          <br />
+          <p class="card-subtitle">Porción más coronal de la encía queratinizada, no está adherida al
+            diente, termina suavemente sobre él en lo que se ha descrito como filo de cuchillo.</p>
+          <br />
+          <p class="card-subtitle">Constituye la pared blanda del surco gingival.</p>
+          <br />
+          <p class="card-subtitle">Está separada de la encía adherida por el surco marginal o surco de
+            la encía marginal.</p>
+          <br />
+          <p class="card-subtitle">Es lisa y brillante y su estructura histológica no permite la
+            presencia del punteado gingival.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion5(1,5)"
+              [disabled]="!srv.validateTopic(ch1, 4)">
+              {{ !ocultar5 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+            <button ion-button outline round color="green" color="green" (click)="aSubt1Macro(1,6)"
+              [disabled]="!srv.validateTopic(ch1, 5)">Ver Tema</button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-list>
+
+
+
+    <ion-list *ngSwitchCase="'micro'">
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Anatomía Microscópica</ion-card-title>
+          <p class="card-subtitle">Palabras clave: Epitelio bucal, epitelio dentogengival, tegido conectivo y
+            diferenciacion epitelial.</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-12a.jpg">
+        </ion-card-content>
+        <ion-card-content>
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-12b.jpg">
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg" />
+          <ion-card-title class="card-title">Caso de estudio</ion-card-title>
+          <p class="card-subtitle">En este segmento podrá encontrar algunos casos clínicos donde se aplican los
+            anteriores conceptos.
+          </p>
+          <p class="card-subtitle">Por favor deslice hacia la izquierda y seleccione el caso de estudio a analizar.
+          </p>
+        </ion-card-content>
+        <ion-card-content>
+          <ion-list>
+            <ion-item-sliding>
+              <ion-item style="background:#ECF0F1;">
+                <ion-avatar item-start>
+                  <img src="../../../../assets/imgs/home2.jpg">
+                </ion-avatar>
+                <ion-title class="card-title">Casos</ion-title>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button style="background:rgb(255, 255, 255);" (click)="aCaso1(1,10)" [disabled]="!srv.validateTopic(ch1, 9)">
+                  <H3>Caso 1</H3>
+                </button>
+                <button ion-button style="background:#ECF0F1;" (click)="aCaso2(1,12)" [disabled]="!srv.validateTopic(ch1, 11)">
+                  <H3>Caso 2</H3>
+                </button>
+                <button ion-button style="background:rgb(255, 255, 255);" (click)="aCaso3(1,14)" [disabled]="!srv.validateTopic(ch1, 13)">
+                  <H3>Caso 3</H3>
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'otros'">
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Union alveolar</ion-card-title>
+          <p class="card-subtitle">Es el aparato de sostén que alberga al diente en el alvéolo y que
+            comprende ligamento periodontal, cemento radicular y hueso alveolar.</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Hueso alveolar</ion-card-title>
+          <p class="card-subtitle">Es la parte del tejido óseo de los maxilares que alberga y sostiene los dientes y por
+            tanto constituye la pared del alvéolo, radiográficamente se aprecia como una línea radiopaca y recibe el
+            nombre de lámina dura que constituye la lámina cribiforme donde se insertan las fibras de Sharpey.</p>
+        </ion-card-content>
+        <ion-card-content *ngIf="ocultar6">
+          <p class="card-subtitle">La lámina dura termina en punta en los dientes anteriores y se va
+            aplanando en la zona de premolares y molares. La porción más coronal del hueso alveolar corresponde a la
+            cresta ósea, que se encuentra a 1.5-2mm en promedio de la unión amelo cementaría.</p>
+          <br />
+          <p class="card-subtitle">La cresta ósea y la lámina dura son parámetros importantes en el
+            diagnóstico precoz de la enfermedad periodontal.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion6(1,17)"
+              [disabled]="!srv.validateTopic(ch1, 16)">
+              {{ !ocultar6 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Ligamento periodontal</ion-card-title>
+          <p class="card-subtitle">El ligamento periodontal es un tejido conectivo vascularizado y celular que rodea los
+            dientes y une el cemento radicular con la lámina dura del hueso alveolar propio.</p>
+        </ion-card-content>
+
+        <ion-card-content *ngIf="ocultar7">
+          <p class="card-subtitle">El ligamento periodontal se continúa con el tejido conectivo
+            gingival anclando la raíz del diente en el alvéolo, sin embargo, su estructura y función son diferentes.
+          </p>
+          <br />
+          <p class="card-subtitle">El espacio del ligamento periodontal tiene un diámetro de 0.15 a 0.2
+            mm en promedio.</p>
+          <br />
+          <p class="card-subtitle">La función del ligamento periodontal se divide en: formativa, de
+            soporte, sensorial y nutritiva. Las dos últimas se realizan por los nervios y vasos del ligamento
+            periodontal.</p>
+          <br />
+          <p class="card-subtitle">'El ligamento periodontal se comunica por conductos vasculares
+            (conductos de volkmann) en el hueso alveolar propio con los espacios medulares del hueso alveolar.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion7(1,18)"
+              [disabled]="!srv.validateTopic(ch1, 17)">
+              {{ !ocultar7 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+            <button ion-button outline round color="green" (click)="aLiagPeriodoncial(1,19)"
+              [disabled]="!srv.validateTopic(ch1, 18)">Ver Tema</button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Cemento radicular</ion-card-title>
+          <p class="card-subtitle">El cemento es un tejido mineralizado especializado que recubre las superficies
+            radiculares
+            y, ocasionalmente, pequeñas porciones de las coronas dentarias. Tiene muchos rasgos en
+            común con el tejido óseo.</p>
+        </ion-card-content>
+
+        <ion-card-content *ngIf="ocultar8">
+          <p class="card-subtitle">Se observa como los cementocitos (células
+            negras) residen en lagunas del cemento celular, se comunican entre sí por una red de
+            prolongaciones citoplasmáticas (flechas) que corren por los canalículos del cemento.</p>
+          <br />
+          <!--corregir por la Figura 1.65 porque falta subir-->
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-65.jpg">
+          <br />
+          <p class="card-subtitle">Se muestra un corte transversal de la apófisis alveolar del
+            maxilar
+            superior a nivel de la porción radicular media de los dientes. Obsérvese que el hueso que
+            recubre las superficies radiculares es considerablemente más grueso en las zonas palatinas
+            que en las vestibulares de los maxilares.</p>
+          <br />
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-70.jpg">
+          <br />
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-71.jpg">
+          <br />
+          <p class="card-subtitle">La pérdida de estructura del cemento por los efectos de la terapia
+            periodontal conlleva a una difícil regeneración de este tejido, sin embargo, se ha observado que puede ser
+            por técnicas regenerativas la presencia de cemento celular reparativo como signo de regeneración
+            periodontal.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion8(1,23)"
+              [disabled]="!srv.validateTopic(ch1, 22)">
+              {{ !ocultar8 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+            <button ion-button outline round color="green" color="green" (click)="aTipCement(1,24)"
+              [disabled]="!srv.validateTopic(ch1, 23)">Ver Tema</button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+        <ion-card-content>
+          <ion-card-title class="card-title">Irrigacion sanguinea del periodonto</ion-card-title>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <!--Figura 1-889: página 61. Lado izquierdo. -->
+          <br />
+          <p class="card-subtitle">El dibujo esquemático ilustra la irrigación
+            sanguínea de los tejidos dentarios y periodontales. La arteria dentaria que es una rama de la
+            arteria maxilar superior e inferior, abandona intratabical antes de que esta penetre en el
+            alveolo dentario.</p>
+          <br />
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-89.jpg">
+          <br />
+        </ion-card-content>
+        <ion-card-content *ngIf="ocultar9">
+          <p class="card-subtitle">La encía recibe el aporte sanguíneo
+            principalmente
+            de los vasos sanguíneos supraperiosticos que son ramas terminales de las arterias
+            sublinguales, mentoniana, bucinatoria o bucal, facial o maxilar externa, palatina mayor,
+            infraorbitaria y alveolar posterosuperior.</p>
+          <br />
+          <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-90.jpg">
+          <!--Figura 1.90: página 61. Lado derecho.-->
+          <br />
+          <p class="card-subtitle">La encía recibe el aporte sanguíneo principalmente de los vasos
+            sanguíneos supraperiosticos que son ramas terminales de las arterias sublinguales, mentoniana, bucinatoria
+            o
+            bucal, facial o maxilar externa, palatina mayor, infraorbitaria y alveolar posterosuperior.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" color="green" (click)="accion9(1,25)"
+              [disabled]="!srv.validateTopic(ch1, 24)">
+              {{ !ocultar9 ? 'Ver más' : 'Ver Menos' }}
+            </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title>Sistema linfático del periodonto</ion-card-title>
+          <p class="card-subtitle">Los vasos linfáticos más pequeños, los capilares linfáticos, forman una amplia red en
+            el tejido conectivo.</p>
+          <br />
+          <p class="card-subtitle">La pared del capilar linfático se compone de una capa única de células endoteliales.
+          </p>
+          <br />
+          <p class="card-subtitle">Por esta razón, estos capilares son difíciles de identificar en un corte histológico.
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-list>
+  </div>
+</ion-content>

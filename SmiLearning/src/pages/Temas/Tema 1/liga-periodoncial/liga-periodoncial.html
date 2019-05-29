@@ -1,0 +1,163 @@
+<!--
+  Generated template for the LigaPeriodoncialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>LigaPeriodoncial</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/Home4.jpg">
+      <ion-card-title class="card-title">Definición</ion-card-title>
+      <p class="card-subtitle">El ligamento periodontal es el tejido conectivo blando, vascularizado y celular que rodea
+        los dientes y une al cemento radicular con la lámina dura del hueso alveolar propio.</p>
+    </ion-card-content>
+    <ion-card-content *ngIf="ocultar1">
+      <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-55.jpg">
+      <br/>
+      <p class="card-subtitle">Es una radiografía de una región mandibular premolar-molar. El ligamento periodontal está
+        incluido en el espacio entre las raíces (R) de los dientes y la lámina dura o hueso alveolar propio.</p>
+        <br />
+        <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-56.jpg">
+        <br/>
+        <p class="card-subtitle">Se observa en un dibujo esquemático como el ligamento periodontal se ubica entre el
+          hueso alveolar propio (ABP) y el cemento radicular (RC).</p>
+    </ion-card-content>
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" color="green" (click)="accion1(1,20)" [disabled]="!srv.validateTopic(ch1, 19)">
+          {{ !ocultar1 ? 'Ver más' : 'Ver Menos' }}
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Clasificacion fibras colágenas</ion-card-title>
+
+      <p class="card-subtitle">El ligamento se forma al desarrollarse el diente, y consigue su estructura cuando el
+        diente alcanza el plano de oclusión y recibe fuerzas funcionales.</p>
+      <br />
+      <p class="card-subtitle">Dentro de las fibras del ligamento se diferencian:</p>
+    </ion-card-content>
+    <ion-card-content *ngIf="ocultar2">
+      <div class="card-item">
+        <p class="card-subtitle"><strong>a. Fibras principales</strong></p>
+        <br />
+        <p class="card-subtitle">Son haces de fibra colágenas que siguen un recorrido ondulado, atravesando el espacio
+          periodontal en sentido oblicuo e insertándose en el cemento y el hueso alveolar.</p>
+        <br />
+        <p class="card-subtitle">Los extremos insertados en el cemento y el hueso reciben el nombre de fibras de Sharpey.</p>
+      </div>
+    </ion-card-content>
+
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" color="green" (click)="accion2(1,21)" [disabled]="!srv.validateTopic(ch1, 20)">
+          {{ !ocultar2 ? 'Ver más' : 'Ver Menos' }}
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">La fibra principal del ligamento periodontal</ion-card-title>
+      <p class="card-subtitle"><strong>1. Grupo transeptales:</strong></p>
+      <br />
+      <p class="card-subtitle">Se extienden interproximalmente sobre la cresta alveolar y se inserta en el cemento del
+        diente adyacente. Son un hallazgo constante y se regeneran incluso una vez destruido el hueso alveolar en la
+        enfermedad periodontal.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Grupo de la cresta alveolar</ion-card-title>
+      <p class="card-subtitle">Se extiende oblicuamente desde el cemento, inmediatamente debajo de la inserción
+        epitelial, hasta la cresta alveolar.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Grupo horizontal</ion-card-title>
+      <p class="card-subtitle">Se extiende en ángulo recto respecto al eje mayor del diente, desde el cemento hacia el
+        hueso alveolar, con el grupo anterior equilibran el empuje coronario de las fibras apicales e impiden los
+        movimientos laterales del diente.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Grupo oblicuo</ion-card-title>
+      <p class="card-subtitle">Se extiende desde el cemento en dirección coronaria, en sentido oblicuo respecto al
+        hueso. Es el grupo más grande del ligamento periodontal. Soporta las fuerzas masticatorias y las transforman en
+        tensión sobre el hueso alveolar.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Grupo apical</ion-card-title>
+      <p class="card-subtitle">Se extiende desde el cemento hasta el hueso en el fondo del alveolo. Contrarresta las
+        fuerzas que tienden a extruir el diente del alveolo, no existe en raíces incompletas.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Grupo interarticular</ion-card-title>
+      <p class="card-subtitle">Solo se encuentra cuando existe más de una raíz. Su función es evitar la rotación y los
+        movimientos de lateralidad.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Otras fibras</ion-card-title>
+      <p class="card-subtitle">Son haces de fibras que se interdigitan en ángulo recto o se extienden sin regularidad
+        alrededor de los haces de fibras ordenados o entre ellos. También existen fibras elásticas dispuestas
+        principalmente peri vasculares y se insertan ene l tercio cervical del cemento radicular, su misión es
+        desconocida.</p>
+    </ion-card-content>
+    <ion-card-content *ngIf="ocultar3">
+      <div class="card-item">
+        <p class="card-subtitle"><strong>1.</strong> Fibras de la cresta alveolar (ACF)</p>
+        <br />
+        <p class="card-subtitle"><strong>2.</strong> Fibras horizontales (HF)</p>
+        <br />
+        <p class="card-subtitle"><strong>3.</strong> Fibras oblicuas (OF)</p>
+        <br />
+        <p class="card-subtitle"><strong>4.</strong> Fibras apicales (APF)</p>
+      </div>
+    </ion-card-content>
+
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" color="green" (click)="accion3(1,22)" [disabled]="!srv.validateTopic(ch1, 21)">
+          {{ !ocultar3 ? 'Ver más' : 'Ver Menos' }}
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

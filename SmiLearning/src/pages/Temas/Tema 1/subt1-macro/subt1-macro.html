@@ -1,0 +1,119 @@
+<!--
+  Generated template for the Subt1MacroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="paua">
+    <ion-title>Subt1Macro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="fondo">
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Encía papilar</ion-card-title>
+      <p class="card-subtitle">Es aquella parte de la encía que ocupa los espacios interproximales entre la superficie
+        de contacto de los dientes y la porción más coronal del hueso alveolar.</p>
+      <br />
+      <p class="card-subtitle">La encía papilar está formada por dos estructuras en forma piramidal, las papilas
+        interdentales, una vestibular y la otra palatina o lingual, unidas entre sí por una depresión en forma de silla
+        de montar denominada Col, el cual ha sido observado en zona de premolares y molares y se pierde en zonas de
+        dientes anteriores.</p>
+      <br />
+      <p class="card-subtitle">Esta zona se caracteriza por la falta de queratinización del epitelio, lo que la hace
+        susceptible a la enfermedad periodontal.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Encía adherida</ion-card-title>
+      <p class="card-subtitle">Está constituida por tejido conectivo fibroso denso dispuesto regularmente, firmemente
+        anclado a la superficie del hueso alveolar y cemento radicular y tapizada por epitelio escamoso estratificado
+        queratinizado.</p>
+      <br />
+      <p class="card-subtitle">La encía adherida, en la superficie externa puede limitarse claramente, cuando es
+        evidente el surco marginal, extendiéndose hasta la unión mucogingival donde se continúa con la mucosa alveolar.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Surco gingival</ion-card-title>
+      <p class="card-subtitle">El surco gingival se constituye una vez el diente hace erupción en la cavidad oral, tiene
+        forma de V y se extiende en toda la circunferencia del diente, sus límites son:</p>
+      <br />
+      <div class="card-item">
+        <p class="card-subtitle"><strong>1.</strong> Pared dentaria.</p>
+        <br />
+        <p class="card-subtitle"><strong>2.</strong> La porción más coronal del epitelio de unión.</p>
+        <br />
+        <p class="card-subtitle"><strong>3.</strong> Epitelio surcular</p>
+      </div>
+    </ion-card-content>
+    <ion-card-content>
+      <p class="card-subtitle" *ngIf="ocultar1">Su profundidad histológica se considera normal en 0.5 mm en promedio;
+        pero el sondaje clinico usualmente da valores de 1 a 3 mm cuando la punta de la sonda penetra el epitelio de
+        unión en mayor o menor extensión.</p>
+    </ion-card-content>
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" color="green" (click)="accion1(1,7)"
+          [disabled]="!srv.validateTopic(ch1, 6)">
+          {{ !ocultar1 ? 'Ver más' : 'Ver Menos' }}
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Epitelio de unión</ion-card-title>
+      <p class="card-subtitle">Es un collar epitelial de 0.25 a 1.35 mm de diámetro en sentido corono apical, que
+        proporciona la adherencia de la encía al diente por medio de hemidesmosomas y se continúa con el epitelio del
+        surco, pero estructuralmente es diferente.</p>
+      <br />
+      <p class="card-subtitle">El epitelio de unión consiste en una banda de células epiteliales, tiene un espesor de 3
+        ó 4 capas celulares en edad temprana y aumenta con la edad de 10 a 20 capas.</p>
+      <br />
+      <p class="card-subtitle">Este epitelio se renueva durante toda la vida. Tiene forma triangular cuyo vértice se
+        localiza apicalmente, mientras que su base es coronal.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>Superficie vestibular</ion-card-title>
+      <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-2.jpg">
+    </ion-card-content>
+    <ion-card-content>
+      <ion-card-title>Paladar</ion-card-title>
+      <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-3.jpg">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/Home4.jpg">
+      <ion-card-title class="card title">Ejercicio de retro alimentación</ion-card-title>
+      <p class="card-subtitle">Realiza la siguiente actividad para completar tu aprendizaje.</p>
+    </ion-card-content>
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button round color="green" (click)="aActividad1(1,8)"
+          [disabled]="!srv.validateTopic(ch1, 7)">Actividad</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

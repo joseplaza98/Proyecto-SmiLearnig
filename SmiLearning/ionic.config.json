@@ -1,0 +1,7 @@
+{
+  "name": "SmiLearning",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
