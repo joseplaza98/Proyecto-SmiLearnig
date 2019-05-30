@@ -9,6 +9,8 @@ import { TipCementPage } from '../tip-cement/tip-cement';
 
 import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
 import { Subscription } from 'rxjs';
+import { Evalucion1T1Page } from '../../Tema 6/Evaluaciones/evalucion1-t1/evalucion1-t1';
+import { Practica1T1Page } from '../../Tema 6/Evaluaciones/practica1-t1/practica1-t1';
 
 /**
  * Generated class for the AnaPeriodontoPage page.
@@ -82,6 +84,16 @@ export class AnaPeriodontoPage {
   aCaso3(chapter: number, topic: number) {
     this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(CasosT1_3Page);
+  }
+
+  aEva1T1(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
+    this.navCtrl.push(Evalucion1T1Page);
+  }
+
+  aPracti1T1(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
+    this.navCtrl.push(Practica1T1Page);
   }
 
   accion1(chapter: number, topic: number) {

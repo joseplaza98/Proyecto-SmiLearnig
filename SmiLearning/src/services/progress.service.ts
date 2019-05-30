@@ -3,7 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Observable, Subscriber } from "rxjs";
 
-const TOPIC_CHAPTER_1 = 25;
+const TOPIC_CHAPTER_1 = 27;
 const TOPIC_CHAPTER_2 = 14;
 const TOPIC_CHAPTER_3 = 16;
 const TOPIC_CHAPTER_4 = 11;

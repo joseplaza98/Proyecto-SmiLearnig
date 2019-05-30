@@ -187,7 +187,7 @@
 
       <ion-card>
         <ion-card-content>
-          <img src="../../../../assets/imgs/home2.jpg">
+          <img src="../../../../assets/imgs/cap1Micro.jpg">
           <ion-card-title class="card-title">Anatomía Microscópica</ion-card-title>
           <p class="card-subtitle">Palabras clave: Epitelio bucal, epitelio dentogengival, tegido conectivo y
             diferenciacion epitelial.</p>
@@ -205,7 +205,7 @@
 
       <ion-card>
         <ion-card-content>
-          <img src="../../../../assets/imgs/home2.jpg" />
+          <img src="../../../../assets/imgs/cap1Micro2.jpg" />
           <ion-card-title class="card-title">Caso de estudio</ion-card-title>
           <p class="card-subtitle">En este segmento podrá encontrar algunos casos clínicos donde se aplican los
             anteriores conceptos.
@@ -223,13 +223,16 @@
                 <ion-title class="card-title">Casos</ion-title>
               </ion-item>
               <ion-item-options side="right">
-                <button ion-button style="background:rgb(255, 255, 255);" (click)="aCaso1(1,10)" [disabled]="!srv.validateTopic(ch1, 9)">
+                <button ion-button style="background:rgb(255, 255, 255);" (click)="aCaso1(1,10)"
+                  [disabled]="!srv.validateTopic(ch1, 9)">
                   <H3>Caso 1</H3>
                 </button>
-                <button ion-button style="background:#ECF0F1;" (click)="aCaso2(1,12)" [disabled]="!srv.validateTopic(ch1, 11)">
+                <button ion-button style="background:#ECF0F1;" (click)="aCaso2(1,12)"
+                  [disabled]="!srv.validateTopic(ch1, 11)">
                   <H3>Caso 2</H3>
                 </button>
-                <button ion-button style="background:rgb(255, 255, 255);" (click)="aCaso3(1,14)" [disabled]="!srv.validateTopic(ch1, 13)">
+                <button ion-button style="background:rgb(255, 255, 255);" (click)="aCaso3(1,14)"
+                  [disabled]="!srv.validateTopic(ch1, 13)">
                   <H3>Caso 3</H3>
                 </button>
               </ion-item-options>
@@ -390,7 +393,7 @@
         </ion-card-content>
         <ion-card-content>
           <div class="content-button">
-            <button ion-button outline round color="green" color="green" (click)="accion9(1,25)"
+            <button ion-button outline round color="green" (click)="accion9(1,25)"
               [disabled]="!srv.validateTopic(ch1, 24)">
               {{ !ocultar9 ? 'Ver más' : 'Ver Menos' }}
             </button>
@@ -413,6 +416,22 @@
         </ion-card-content>
       </ion-card>
 
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../../assets/imgs/home2.jpg">
+          <ion-card-title class="card-title">Evaluación</ion-card-title>
+          <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.</p>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="content-button">
+            <button ion-button outline round color="green" (click)="aEva1T1(1,26)"
+            [disabled]="!srv.validateTopic(ch1, 25)">Parte I</button>
+            <button ion-button outline round color="green" (click)="aPracti1T1(1,27)"
+            [disabled]="!srv.validateTopic(ch1, 26)">Parte II</button>
+          </div>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
+
   </div>
 </ion-content>
