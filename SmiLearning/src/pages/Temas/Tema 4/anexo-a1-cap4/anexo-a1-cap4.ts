@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the AnexoA1Cap4Page page.
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 })
 export class AnexoA1Cap4Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -25,6 +25,13 @@ export class AnexoA1Cap4Page {
     });
     loader.present();
     console.log('ionViewDidLoad AnexoA1Cap4Page');
+
+    const alert = this.alertCtrl.create({
+      title: 'Recomendación',
+      subTitle: 'Active la rotacion de pantalla en su dispositivo para poder observar el contenido de mejor modo.',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }

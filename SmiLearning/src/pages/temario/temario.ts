@@ -10,6 +10,7 @@ import { PresentTema6Page } from '../Temas/Tema 6/present-tema6/present-tema6';
 /**Imports Progress */
 import { ChapterProgress, ProgressService } from '../../services/progress.service';
 import { Subscription } from 'rxjs';
+import { PagPrincipalPage } from '../pag-principal/pag-principal';
 
 /**
  * Generated class for the TemarioPage page.
@@ -102,6 +103,10 @@ export class TemarioPage {
 
   aPresentTema6(){
     this.navCtrl.push(PresentTema6Page);
+  }
+
+  aPagPrinc(){
+    this.navCtrl.setRoot(PagPrincipalPage);
   }
 
   /**Ver Ocultar */

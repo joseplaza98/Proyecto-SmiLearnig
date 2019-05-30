@@ -30,24 +30,28 @@
       </p>
     </ion-card-content>
 
-      <ion-card-content *ngIf="ocultar1">
-        <div class="card-item">
-          <p class="card-subtitle"><strong>1.</strong> El análisis de las muestras de biopsias obtenidas demostró la alta correspondencia del
-            diagnóstico clínico, y los hallazgos histomorfologicos encontrados, lo cual corrobora una serie de estudios
-            realizados a nivel mundial.
-          </p>
-          <br />
-          <p class="card-subtitle"><strong>2.</strong> Las características clínicas observadas en la gengivitis y periodontitis, se realizan
-            mediante diferentes técnicas histomorfologicas, mediante las cuales es posible detallar las alteraciones que se
-            producen al interior de los tejidos gingivales, según el grado de reacción inflamatoria.</p>
-          <br />
-          <p class="card-subtitle">Múltiples autores coinciden que existe una correlación entre el diagnóstico clínico y el histopatológico, y
-            la biopsia es la forma más común, los cuales ayudan a corroborar el diagnóstico presuntivo expresado en los
-            cambios clínicos. </p>
-        </div>
-      </ion-card-content>
+    <ion-card-content *ngIf="ocultar1">
+      <div class="card-item">
+        <p class="card-subtitle"><strong>1.</strong> El análisis de las muestras de biopsias obtenidas demostró la alta
+          correspondencia del
+          diagnóstico clínico, y los hallazgos histomorfologicos encontrados, lo cual corrobora una serie de estudios
+          realizados a nivel mundial.
+        </p>
+        <br />
+        <p class="card-subtitle"><strong>2.</strong> Las características clínicas observadas en la gengivitis y
+          periodontitis, se realizan
+          mediante diferentes técnicas histomorfologicas, mediante las cuales es posible detallar las alteraciones que
+          se
+          producen al interior de los tejidos gingivales, según el grado de reacción inflamatoria.</p>
+        <br />
+        <p class="card-subtitle">Múltiples autores coinciden que existe una correlación entre el diagnóstico clínico y
+          el histopatológico, y
+          la biopsia es la forma más común, los cuales ayudan a corroborar el diagnóstico presuntivo expresado en los
+          cambios clínicos. </p>
+      </div>
+    </ion-card-content>
 
-<ion-card-content>
+    <ion-card-content>
       <div class="content-button">
         <button ion-button outline round color="green" (click)="accion1()">
           {{ !ocultar1 ? 'Ver más' : 'Ver Menos' }}
@@ -78,16 +82,20 @@
 
     <ion-card-content *ngIf="ocultar2">
       <div class="card-item">
-        <p class="card-subtitle"><strong>1.</strong> Las láminas se evaluaron por un solo investigador con el microscopio binocular Olympus
+        <p class="card-subtitle"><strong>1.</strong> Las láminas se evaluaron por un solo investigador con el
+          microscopio binocular Olympus
           para establecer criterios de criterios definitivos.
         </p>
         <br />
-        <p class="card-subtitle"><strong>2.</strong> Cuando la inflamación es moderada, se observa mayor número de plasmocitos que invaden el
-          tejido conectivo y el epitelio de unión desarrolla prolongaciones hacia el tejido conectivo y el epitelio de unión con destrucción
+        <p class="card-subtitle"><strong>2.</strong> Cuando la inflamación es moderada, se observa mayor número de
+          plasmocitos que invaden el
+          tejido conectivo y el epitelio de unión desarrolla prolongaciones hacia el tejido conectivo y el epitelio de
+          unión con destrucción
           de fibras colágenas intactas y células del infiltrado inflamatorio.
         </p>
         <br />
-        <p class="card-subtitle"><strong> 3. </strong> Los criterios de grosor del epitelio, displasia, integridad de la membrana basal,
+        <p class="card-subtitle"><strong> 3. </strong> Los criterios de grosor del epitelio, displasia, integridad de la
+          membrana basal,
           hiperplasia de tejido conectivo.
         </p>
       </div>
@@ -105,6 +113,19 @@
       </div>
     </ion-card-content>
 
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="../../../../assets/imgs/home2.jpg">
+      <ion-card-title class="card-title">Evaluación</ion-card-title>
+      <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.</p>
+    </ion-card-content>
+    <ion-card-content>
+      <div class="content-button">
+        <button ion-button outline round color="green" (click)="aEva4T4()">Evaluación</button>
+      </div>
+    </ion-card-content>
   </ion-card>
 
 

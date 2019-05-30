@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AnexoA1Cap4Page } from '../anexo-a1-cap4/anexo-a1-cap4';
+import { Evalucion4T4Page } from '../../Tema 6/Evaluaciones/evalucion4-t4/evalucion4-t4';
 
 /**
  * Generated class for the AnalisisClinCap4Page page.
@@ -30,8 +31,11 @@ export class AnalisisClinCap4Page {
   aSeccionAnexo1Cap4(){
     this.navCtrl.push(AnexoA1Cap4Page);
   }
- 
 
+  aEva4T4(){
+    this.navCtrl.push(Evalucion4T4Page);
+  }
+ 
   accion1() {        
     this.ocultar1 = !this.ocultar1;
     this.checkActiveButton();

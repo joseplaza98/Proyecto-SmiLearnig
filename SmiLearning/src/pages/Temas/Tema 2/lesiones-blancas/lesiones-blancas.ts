@@ -4,6 +4,8 @@ import { PresentEnfHerPage } from '../present-enf-her/present-enf-her';
 import { PresentLesReacPage } from '../present-les-reac/present-les-reac';
 import { PresentLesNoEpitPage } from '../present-les-no-epit/present-les-no-epit';
 import { PresentOtrasPage } from '../present-otras/present-otras';
+import { Evalucion2T2Page } from '../../Tema 6/Evaluaciones/evalucion2-t2/evalucion2-t2';
+import { TemarioPage } from '../../../temario/temario';
 
 /**
  * Generated class for the LesionesBlancasPage page.
@@ -34,6 +36,14 @@ export class LesionesBlancasPage {
   }
   apresnetOtros() {
     this.navCtrl.push(PresentOtrasPage);
+  }
+
+  aTemario(){
+    this.navCtrl.setRoot(TemarioPage);
+  }
+
+  aEva2T2(){
+    this.navCtrl.push(Evalucion2T2Page);
   }
 
   ionViewDidLoad() {
