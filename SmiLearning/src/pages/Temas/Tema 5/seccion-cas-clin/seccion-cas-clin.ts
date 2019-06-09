@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
-
 /**
  * Generated class for the SeccionCasClinPage page.
  *

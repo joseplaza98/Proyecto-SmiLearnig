@@ -24,7 +24,6 @@ export class CasosT1_3Page {
   ch3: ChapterProgress = { progress: 0, topics: [] };
   ch4: ChapterProgress = { progress: 0, topics: [] };
   ch5: ChapterProgress = { progress: 0, topics: [] };
-  ch6: ChapterProgress = { progress: 0, topics: [] };
 
   subs: Subscription;
 
@@ -46,7 +45,6 @@ export class CasosT1_3Page {
         this.ch3 = x.ch3;
         this.ch4 = x.ch4;
         this.ch5 = x.ch5;
-        this.ch6 = x.ch6;
       });
   }
 

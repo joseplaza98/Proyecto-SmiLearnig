@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AnexoA1Cap4Page } from '../anexo-a1-cap4/anexo-a1-cap4';
-import { Evalucion4T4Page } from '../../Tema 6/Evaluaciones/evalucion4-t4/evalucion4-t4';
+
+import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
+import { Subscription } from 'rxjs';
 
 /**
  * Generated class for the AnalisisClinCap4Page page.
@@ -21,27 +23,36 @@ export class AnalisisClinCap4Page {
   ocultar2: boolean = false; 
   ocultartodos: boolean = false; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  total = 0;
+  ch1: ChapterProgress = { progress: 0, topics: [] };
+  ch2: ChapterProgress = { progress: 0, topics: [] };
+  ch3: ChapterProgress = { progress: 0, topics: [] };
+  ch4: ChapterProgress = { progress: 0, topics: [] };
+  ch5: ChapterProgress = { progress: 0, topics: [] };
+  
+
+  subs: Subscription;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public srv: ProgressService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnalisisClinCap4Page');
   }
 
-  aSeccionAnexo1Cap4(){
+  aSeccionAnexo1Cap4(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(AnexoA1Cap4Page);
   }
-
-  aEva4T4(){
-    this.navCtrl.push(Evalucion4T4Page);
-  }
  
-  accion1() {        
+  accion1(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);       
     this.ocultar1 = !this.ocultar1;
     this.checkActiveButton();
   }
 
-  accion2() {        
+  accion2(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);       
     this.ocultar2 = !this.ocultar2;
     this.checkActiveButton();
   }
@@ -70,7 +81,22 @@ export class AnalisisClinCap4Page {
       this.ocultartodos = !this.ocultartodos;
     }
  
-   
+    ionViewWillEnter() {
+      this.subs = this.srv.progress()
+        .subscribe(x => {
+          this.total = x.total;
+          this.ch1 = x.ch1;
+          this.ch2 = x.ch2;
+          this.ch3 = x.ch3;
+          this.ch4 = x.ch4;
+          this.ch5 = x.ch5;
+        });
+    }
+  
+    ionViewWillLeave() {
+      this.subs.unsubscribe();
+    }
+
   
   }
 

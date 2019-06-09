@@ -15,32 +15,54 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <ion-card-title class="card-title">SEGMENTO I</ion-card-title>
-      <p class="card-subtitle">Lista de libros Periodoncia; Jhan Lindhe, padre de la Periodoncia.</p>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title class="card-title">SEGMENTO I</ion-card-title>
+              <p class="card-subtitle">Lista de libros Periodoncia; Jhan Lindhe, padre de la Periodoncia.</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card *ngFor="let item of Libros1">
+            <ion-card-content>
+              <img src="{{item.img}}">
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card *ngFor="let item of Libros1">
-    <ion-card-content>
-      <img src="{{item.img}}">
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <ion-card-title class="card-title">SEGMENTO II</ion-card-title>
-      <p class="card-subtitle">Publicación de Journal (Revisiones de literatura).
-        Bases de Datos.
-      </p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card *ngFor="let item of Libros2">
-    <ion-card-content>
-      <img src="{{item.img}}">
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title class="card-title">SEGMENTO II</ion-card-title>
+              <p class="card-subtitle">Publicación de Journal (Revisiones de literatura).
+                Bases de Datos.
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card *ngFor="let item of Libros2">
+            <ion-card-content>
+              <img src="{{item.img}}">
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

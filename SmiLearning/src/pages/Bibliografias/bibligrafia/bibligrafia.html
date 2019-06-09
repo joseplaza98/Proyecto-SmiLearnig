@@ -29,44 +29,66 @@
   <div [ngSwitch]="intro">
     <ion-list *ngSwitchCase="'c1'">
 
-      <ion-card *ngFor="let item of presentC1">
-        <ion-card-content>
-          <ion-card-title class="card-title">{{item.tt}}</ion-card-title>
-          <p class="card-subtitle">
-            {{item.present}}
-          </p>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card *ngFor="let item of bibliografia1">
-        <ion-card-content>
-          <ion-card-title class="card-title">Consultar:</ion-card-title>
-          <p class="card-subtitle">
-            {{item.ref}}
-          </p>
-        </ion-card-content>
-      </ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" push-md="3">
+            <div>
+              <ion-card *ngFor="let item of presentC1">
+                <ion-card-content>
+                  <ion-card-title class="card-title">{{item.tt}}</ion-card-title>
+                  <p class="card-subtitle">
+                    {{item.present}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+          <ion-col size-md="3" push-md="3">
+            <div>
+              <ion-card *ngFor="let item of bibliografia1">
+                <ion-card-content>
+                  <ion-card-title class="card-title">Consultar:</ion-card-title>
+                  <p class="card-subtitle">
+                    {{item.ref}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
     </ion-list>
     <ion-list *ngSwitchCase="'c2'">
 
-      <ion-card *ngFor="let item of presentC2">
-        <ion-card-content>
-          <ion-card-title class="card-title">{{item.tt}}</ion-card-title>
-          <p class="card-subtitle">
-            {{item.present}}
-          </p>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card *ngFor="let item of bibliografia2">
-        <ion-card-content>
-          <ion-card-title class="card-title">Consultar:</ion-card-title>
-          <p class="card-subtitle">
-            {{item.ref}}
-          </p>
-        </ion-card-content>
-      </ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" push-md="3">
+            <div>
+              <ion-card *ngFor="let item of presentC2">
+                <ion-card-content>
+                  <ion-card-title class="card-title">{{item.tt}}</ion-card-title>
+                  <p class="card-subtitle">
+                    {{item.present}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+          <ion-col size-md="3" push-md="3">
+            <div>
+              <ion-card *ngFor="let item of bibliografia2">
+                <ion-card-content>
+                  <ion-card-title class="card-title">Consultar:</ion-card-title>
+                  <p class="card-subtitle">
+                    {{item.ref}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
     </ion-list>
 

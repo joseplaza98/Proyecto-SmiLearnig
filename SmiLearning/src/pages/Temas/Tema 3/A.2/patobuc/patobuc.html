@@ -36,7 +36,7 @@
       </ion-card-content>
       <ion-card-content>
         <div class="content-button">
-          <button ion-button outline round color="green" (click)="aAnexoLab()">Ver Anexo</button>
+          <button ion-button outline round color="green" (click)="aAnexoLab(3,7)" [disabled]="!srv.validateTopic(ch3,6)">Ver Anexo</button>
         </div>
     </ion-card-content>
   </ion-card>

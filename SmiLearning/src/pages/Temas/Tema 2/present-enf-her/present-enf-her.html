@@ -15,100 +15,135 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Enfermedades hereditarias</ion-card-title>
-      <p class="card-subtitle">
-        Varias enfermedades hereditarias de la mucosa bucal se caracterizan por hiperqueratosis cuya expresión clínica
-        común es una lesión de color blanco en la mucosa.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Estas afecciones también se denominan genoqueratosis o con un término más general, genodermatosis.
-      </p>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Enfermedades hereditarias</ion-card-title>
+              <p class="card-subtitle">
+                Varias enfermedades hereditarias de la mucosa bucal se caracterizan por hiperqueratosis cuya expresión
+                clínica
+                común es una lesión de color blanco en la mucosa.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Estas afecciones también se denominan genoqueratosis o con un término más general, genodermatosis.
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Leucodema</ion-card-title>
+              <p class="card-subtitle">
+                El leucodema es una opacidad generalizada de la mucosa bucal que puede considerarse como una variante de
+                la
+                normal.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Se observa en la mayoría de la población.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aLeucodema(2,5)"
+                  [disabled]="!srv.validateTopic(ch2,4)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Leucodema</ion-card-title>
-      <p class="card-subtitle">
-        El leucodema es una opacidad generalizada de la mucosa bucal que puede considerarse como una variante de la
-        normal.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Se observa en la mayoría de la población.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aLeucodema()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Nevu esponjoso blanco</ion-card-title>
-      <p class="card-subtitle">
-        El nevu esponjoso blanco es una enfermedad autosómica dominante causada al parecer por mutaciones en los puntos
-        4 o 13, o ambos, de la queratina.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Daña la mucosa bucal de ambos lados y no requiere tratamiento.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aNEvuEsponjoso()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Disqueratosis intraepitelial benigna hereditaria</ion-card-title>
-      <p class="card-subtitle">
-        La disqueratosis intraepitelial benigna hereditaria (DIBH), también conocida como enfermedad de Witkop, es una
-        rara afección hereditaria autosómica dominante de naturaleza penetrante.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Esta anormalidad se observó en una mezcla trirracial aislada de raza blanca, india y afroamericana en el condado
-        de Halifax, Carolina del norte.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aDisqueratosis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Queratosis</ion-card-title>
-      <p class="card-subtitle">
-        La queratosis folicular (enfermedad de Darier, enfermedad de Darier-White) es un trastorno genético transmitido
-        con una modalidad hereditaria autosómica dominante.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Su causa está establecida, los conceptos relacionados con su patogenia son menos claros.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aQueratosis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Nevu esponjoso blanco</ion-card-title>
+              <p class="card-subtitle">
+                El nevu esponjoso blanco es una enfermedad autosómica dominante causada al parecer por mutaciones en los
+                puntos
+                4 o 13, o ambos, de la queratina.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Daña la mucosa bucal de ambos lados y no requiere tratamiento.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aNEvuEsponjoso(2,6)"
+                  [disabled]="!srv.validateTopic(ch2,5)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Disqueratosis intraepitelial benigna hereditaria</ion-card-title>
+              <p class="card-subtitle">
+                La disqueratosis intraepitelial benigna hereditaria (DIBH), también conocida como enfermedad de Witkop,
+                es una
+                rara afección hereditaria autosómica dominante de naturaleza penetrante.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Esta anormalidad se observó en una mezcla triacal aislada de raza blanca, india y afroamericana en el
+                condado
+                de Halifax, Carolina del norte.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aDisqueratosis(2,7)"
+                  [disabled]="!srv.validateTopic(ch2,6)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" pull-md="9">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Queratosis</ion-card-title>
+              <p class="card-subtitle">
+                La queratosis folicular (enfermedad de Darier, enfermedad de Darier-White) es un trastorno genético
+                transmitido
+                con una modalidad hereditaria autosómica dominante.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Su causa está establecida, los conceptos relacionados con su patogenia son menos claros.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aQueratosis(2,8)"
+                  [disabled]="!srv.validateTopic(ch2,7)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

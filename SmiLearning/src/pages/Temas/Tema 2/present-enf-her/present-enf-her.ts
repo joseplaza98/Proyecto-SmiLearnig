@@ -5,6 +5,9 @@ import { NevuEsponBlandPage } from '../Lesiones/Enfermedades hereditarias/nevu-e
 import { DisqueratosisPage } from '../Lesiones/Enfermedades hereditarias/disqueratosis/disqueratosis';
 import { QueratosisPage } from '../Lesiones/Enfermedades hereditarias/queratosis/queratosis';
 
+import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
+import { Subscription } from 'rxjs';
+
 /**
  * Generated class for the PresentEnfHerPage page.
  *
@@ -19,25 +22,54 @@ import { QueratosisPage } from '../Lesiones/Enfermedades hereditarias/queratosis
 })
 export class PresentEnfHerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  total = 0;
+  ch1: ChapterProgress = { progress: 0, topics: [] };
+  ch2: ChapterProgress = { progress: 0, topics: [] };
+  ch3: ChapterProgress = { progress: 0, topics: [] };
+  ch4: ChapterProgress = { progress: 0, topics: [] };
+  ch5: ChapterProgress = { progress: 0, topics: [] };
+  
+
+  subs: Subscription;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public srv: ProgressService) {
   }
 
-  aLeucodema() {
+  aLeucodema(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(LeucodemaPage);
   }
 
-  aNEvuEsponjoso() {
+  aNEvuEsponjoso(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(NevuEsponBlandPage);
   }
 
-  aDisqueratosis() {
+  aDisqueratosis(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(DisqueratosisPage);
   }
 
-  aQueratosis() {
+  aQueratosis(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(QueratosisPage);
   }
 
+  ionViewWillEnter() {
+    this.subs = this.srv.progress()
+      .subscribe(x => {
+        this.total = x.total;
+        this.ch1 = x.ch1;
+        this.ch2 = x.ch2;
+        this.ch3 = x.ch3;
+        this.ch4 = x.ch4;
+        this.ch5 = x.ch5;
+      });
+  }
+
+  ionViewWillLeave() {
+    this.subs.unsubscribe();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PresentEnfHerPage');

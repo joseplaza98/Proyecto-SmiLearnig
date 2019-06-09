@@ -67,8 +67,8 @@
       "cordova-plugin-streaming-media": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

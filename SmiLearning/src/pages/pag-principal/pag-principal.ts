@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, LoadingController, AlertController, App } from 'ionic-angular';
 import { BusquedaPage } from '../busqueda/busqueda';
 import { TemarioPage } from '../temario/temario';
-import { ChatForoPage } from '../chat-foro/chat-foro';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthService } from '../../services/auth.service';
 import { ProgressService } from '../../services/progress.service';
 import { PresentCasClinPage } from '../Temas/Tema 5/present-cas-clin/present-cas-clin';
 import { PresentBibliografiaPage } from '../Bibliografias/present-bibliografia/present-bibliografia';
 import { LoginPage } from '../Sesion/login/login';
+import { PresentContAdiPage } from '../Contenido adicional/present-cont-adi/present-cont-adi';
+import { PresentForoPage } from '../Foro/present-foro/present-foro';
 
 /**
  * Generated class for the PagPrincipalPage page.
@@ -29,24 +30,28 @@ export class PagPrincipalPage {
   constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public loadingCtrl: LoadingController, public authService: AuthService, public alertController: AlertController, public app: App, public srv: ProgressService) {
   }
 
-  aBusqueda() {
-    this.navCtrl.push(BusquedaPage);
-  }
-
   aTemario() {
     this.navCtrl.push(TemarioPage);
   }
 
-  aForo(){
-    this.navCtrl.push(ChatForoPage);
+  aBusqueda() {
+    this.navCtrl.push(BusquedaPage);
   }
 
-  aPresentBibliografia(){
-    this.navCtrl.push(PresentBibliografiaPage);
-  }
-
-  aPresentCasClin(){
+  aPresentCasClin() {
     this.navCtrl.push(PresentCasClinPage);
+  }
+
+  aPresentContAdi() {
+    this.navCtrl.push(PresentContAdiPage);
+  }
+
+  aPresentForo() {
+    this.navCtrl.push(PresentForoPage);
+  }
+
+  aPresentBibliografia() {
+    this.navCtrl.push(PresentBibliografiaPage);
   }
 
   singOut() {

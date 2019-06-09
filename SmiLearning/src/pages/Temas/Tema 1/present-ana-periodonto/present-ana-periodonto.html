@@ -15,33 +15,51 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Home4.jpg">
-      <ion-card-title class="card-title">Introducción</ion-card-title>
-      <p class="card-subtitle">En este capítulo se hace una breve descripción de las características del periodonto
-        normal.</p>
-      <br />
-      <p class="card-subtitle">Los conocimientos previos de embriología e histología bucales.</p>
-      <br />
-      <div class="card-item">
-        <p class="card-subtitle"><strong>Palabras Clave:</strong></p>
-        <br />
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
         <div>
-          <p class="card-subtitle">• Anatomía macroscópica. </p>
-          <p class="card-subtitle">• Anatomía microscópica.</p>
-          <p class="card-subtitle">• Practica de laboratorio.</p>
-          <p class="card-subtitle">• Periodontología Clínica.</p>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Introducción</ion-card-title>
+              <p class="card-subtitle">En este capítulo se hace una breve descripción de las características del
+                periodonto
+                normal.</p>
+              <br />
+              <p class="card-subtitle">Los conocimientos previos de embriología e histología bucales.</p>
+              <br />
+              <div class="card-item">
+                <p class="card-subtitle"><strong>Palabras Clave:</strong></p>
+                <br />
+                <div>
+                  <p class="card-subtitle">• Anatomía macroscópica. </p>
+                  <p class="card-subtitle">• Anatomía microscópica.</p>
+                  <p class="card-subtitle">• Práctica de laboratorio.</p>
+                  <p class="card-subtitle">• Peri odontología clínica.</p>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
         </div>
-      </div>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline full color="green" round style="align-content: flex"
-          (click)="aAnaPeriodonto()">Aprender</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+      </ion-col>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Descripción</ion-card-title>
+              <p class="card-subtitle">Descripción de los temas a tratar</p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aAnaPeriodonto(1,2)" [disabled]="!srv.validateTopic(ch1, 1)">Aprender</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

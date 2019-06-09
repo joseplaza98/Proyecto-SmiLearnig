@@ -5,11 +5,10 @@ import { PresentPatoBucalPage } from '../Temas/Tema 2/present-pato-bucal/present
 import { PresentTem3Page } from '../Temas/Tema 3/present-tem3/present-tem3';
 import { PresentClinPaPage } from'../Temas/Tema 4/present-clin-pa/present-clin-pa';
 import { PresentCasClinPage } from '../Temas/Tema 5/present-cas-clin/present-cas-clin';
-import { PresentTema6Page } from '../Temas/Tema 6/present-tema6/present-tema6';
 
-/**Imports Progress */
 import { ChapterProgress, ProgressService } from '../../services/progress.service';
 import { Subscription } from 'rxjs';
+
 import { PagPrincipalPage } from '../pag-principal/pag-principal';
 
 /**
@@ -32,19 +31,17 @@ export class TemarioPage {
   ocultar3: boolean = false;
   ocultar4: boolean = false;
   ocultar5: boolean = false;
-  ocultar6: boolean = false;
 
   ocultartodos: boolean = false; 
 
 
-  /**Progress */
   total = 0;
   ch1: ChapterProgress = { progress: 0, topics: [] };
   ch2: ChapterProgress = { progress: 0, topics: [] };
   ch3: ChapterProgress = { progress: 0, topics: [] };
   ch4: ChapterProgress = { progress: 0, topics: [] };
   ch5: ChapterProgress = { progress: 0, topics: [] };
-  ch6: ChapterProgress = { progress: 0, topics: [] };
+  
 
   subs: Subscription;
 
@@ -76,33 +73,29 @@ export class TemarioPage {
     this.checkActiveButton();
   }
 
-  accion6() {        
-    this.ocultar6 = !this.ocultar6;
-    this.checkActiveButton();
-  }
-
-  aPresentAnaPeriodonto(){
+  aPresentAnaPeriodonto(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentAnaPeriodontoPage);
   }
 
-  aPatoBucal(){
+  aPatoBucal(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentPatoBucalPage);
   }
 
-  aPresentTem3(){
+  aPresentTem3(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentTem3Page);
   }
 
-  aPresentClinPa(){
+  aPresentClinPa(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentClinPaPage);
   } 
   
-  aPresentCasClin(){
+  aPresentCasClin(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentCasClinPage);
-  }
-
-  aPresentTema6(){
-    this.navCtrl.push(PresentTema6Page);
   }
 
   aPagPrinc(){
@@ -112,10 +105,10 @@ export class TemarioPage {
   /**Ver Ocultar */
   checkActiveButton() {
 
-    if ( this.ocultar1 && this.ocultar2 && this.ocultar3 && this.ocultar4 && this.ocultar5 && this.ocultar6 ) {
+    if ( this.ocultar1 && this.ocultar2 && this.ocultar3 && this.ocultar4 && this.ocultar5) {
       this.ocultartodos = true;
     }
-    else if ( !this.ocultar1 && !this.ocultar2 && !this.ocultar3 && !this.ocultar4 && this.ocultar5 && this.ocultar6 ) {
+    else if ( !this.ocultar1 && !this.ocultar2 && !this.ocultar3 && !this.ocultar4 && this.ocultar5) {
       this.ocultartodos = false;
     }
   }
@@ -129,7 +122,6 @@ export class TemarioPage {
       this.ocultar3     = true;
       this.ocultar4     = true;
       this.ocultar5     = true;
-      this.ocultar6     = true;
 
     }
     else {
@@ -138,7 +130,6 @@ export class TemarioPage {
       this.ocultar3     = false;
       this.ocultar4     = false;
       this.ocultar5     = false;
-      this.ocultar6     = false;
 
     }
   
@@ -146,7 +137,6 @@ export class TemarioPage {
   }
 
 
-/**Progress*/
   ionViewWillEnter() {
     this.subs = this.srv.progress()
       .subscribe(x => {
@@ -156,14 +146,12 @@ export class TemarioPage {
         this.ch3 = x.ch3;
         this.ch4 = x.ch4;
         this.ch5 = x.ch5;
-        this.ch6 = x.ch6;
       });
   }
 
   ionViewWillLeave() {
     this.subs.unsubscribe();
   }
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TemarioPage');

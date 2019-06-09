@@ -6,6 +6,9 @@ import { TemarioPage } from '../../../temario/temario';
 import { Evalucion3T3Page } from '../../Tema 6/Evaluaciones/evalucion3-t3/evalucion3-t3';
 import { Evaluacion3_2T3Page } from '../../Tema 6/Evaluaciones/evaluacion3-2-t3/evaluacion3-2-t3';
 
+import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
+import { Subscription } from 'rxjs';
+
 /**
  * Generated class for the PresentTem3Page page.
  *
@@ -20,14 +23,26 @@ import { Evaluacion3_2T3Page } from '../../Tema 6/Evaluaciones/evaluacion3-2-t3/
 })
 export class PresentTem3Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  total = 0;
+  ch1: ChapterProgress = { progress: 0, topics: [] };
+  ch2: ChapterProgress = { progress: 0, topics: [] };
+  ch3: ChapterProgress = { progress: 0, topics: [] };
+  ch4: ChapterProgress = { progress: 0, topics: [] };
+  ch5: ChapterProgress = { progress: 0, topics: [] };
+  
+
+  subs: Subscription;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public srv: ProgressService) {
   }
 
-  aExamenLab() {
+  aExamenLab(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(ExamenInterpretacionCortePage);
   }
 
-  aLabucal() {
+  aLabucal(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(LabPatobucalPage);
   }
 
@@ -35,14 +50,31 @@ export class PresentTem3Page {
     this.navCtrl.setRoot(TemarioPage);
   }
 
-  aEva3T3a(){
+  aEva3T3a(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(Evalucion3T3Page);
   }
 
-  aEva3T3b(){
+  aEva3T3b(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(Evaluacion3_2T3Page);
   }
 
+  ionViewWillEnter() {
+    this.subs = this.srv.progress()
+      .subscribe(x => {
+        this.total = x.total;
+        this.ch1 = x.ch1;
+        this.ch2 = x.ch2;
+        this.ch3 = x.ch3;
+        this.ch4 = x.ch4;
+        this.ch5 = x.ch5;
+      });
+  }
+
+  ionViewWillLeave() {
+    this.subs.unsubscribe();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PresentTem3Page');

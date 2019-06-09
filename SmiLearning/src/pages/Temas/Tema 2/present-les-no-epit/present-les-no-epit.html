@@ -14,171 +14,225 @@
 
 
 <ion-content padding class="fondo">
-  <ion-card>
 
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Candidiasis</ion-card-title>
-      <p class="card-subtitle">
-        La candidiasis incluye un grupo de enfermedades mucocutaneas vinculadas con un agente etiológico común del
-        genero Cándida de hongos.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Es la infección micotica más común de la boca, aunque es difícil determinar la tasa de frecuencia, dada la
-        prevalencia del organismo causal en una gran proporción de la población.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aCandidiasis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Candidiasis</ion-card-title>
+              <p class="card-subtitle">
+                La candidiasis incluye un grupo de enfermedades mucocutaneas vinculadas con un agente etiológico común
+                del
+                genero Cándida de hongos.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Es la infección micótica más común de la boca, aunque es difícil determinar la tasa de frecuencia, dada
+                la
+                prevalencia del organismo causal en una gran proporción de la población.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aCandidiasis(2,15)"
+                  [disabled]="!srv.validateTopic(ch2,14)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Quemaduras de la mucosa</ion-card-title>
+              <p class="card-subtitle">
+                La forma más común de quemadura superficial de la mucosa bucal se relaciona con aplicación tópica de
+                sustancias
+                químicas, como ácido acetilsalicílico o agentes cáusticos.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                El abuso de fármacos tópicos, aplicación accidental de soluciones blanqueadoras con ácido fosfórico o
+                gel o bien
+                el uso continuo y excesivo de enjuagues bucales que contengan alcohol pueden provocar efectos similares.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aQuemaduras(2,16)"
+                  [disabled]="!srv.validateTopic(ch2,15)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Fibrosis submucosa</ion-card-title>
+              <p class="card-subtitle">
+                Varios factores contribuyen a la aparición de la fibrosis submucosa, incluidas la nutrición general o
+                las
+                deficiencias vitamínicas y la hipersensibilidad a varios elementos constitutivos dela dieta.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aFibrosos(2,17)"
+                  [disabled]="!srv.validateTopic(ch2,16)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Gránulos de Fordyce</ion-card-title>
+              <p class="card-subtitle">
+                Los gránulos de fordyce son glándulas sebáceas ectópicas o coristomas sebáceos (tejido normal en
+                localización
+                anormal).
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Se cree que estos gránulos se originan en las etapas del desarrollo.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aGranulos(2,18)"
+                  [disabled]="!srv.validateTopic(ch2,17)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Quemaduras de la mucosa</ion-card-title>
-      <p class="card-subtitle">
-        La forma más común de quemadura superficial de la mucosa bucal se relaciona con aplicación tópica de sustancias
-        químicas, como ácido acetilsalicílico o agentes cáusticos.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        El abuso de fármacos tópicos, aplicación accidental de soluciones blanqueadoras con ácido fosfórico o gel o bien
-        el uso continuo y excesivo de enguajes bucales que contengan alcohol pueden provocar efectos similares.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aQuemaduras()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Tejido linfoide ectópico</ion-card-title>
+              <p class="card-subtitle">
+                Se puede encontrar tejido linfoide ectópico en un gran número de sitios en la boca.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                En condiciones normales, se presenta en el borde posterolateral de la lengua, donde se conoce como
+                tonsila
+                lingual, se observan generalmente en el paladar blando, piso de boca y pilares tonsilares, aunque
+                también se
+                pueden presentar en otros sitios.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aTejidoLinfoide(2,19)"
+                  [disabled]="!srv.validateTopic(ch2,18)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Quistes gingivales</ion-card-title>
+              <p class="card-subtitle">
+                Los quistes gingivales de origen odontogeno se presenta en adultos y también en lactantes, la frecuencia
+                relativa es mayor en neonatos y a la edad de tres meses ya es raro detectar estos quistes. Su etiología
+                se
+                origina en la lámina dental (restos de serres) en la submucosa gingival.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aQuistes(2,20)"
+                  [disabled]="!srv.validateTopic(ch2,19)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Fibrosis submucosa</ion-card-title>
-      <p class="card-subtitle">
-        Varios factores contribuyen a la aparición de la fibrosis submucosa, incluidas la nutrición general o las
-        deficiencias vitamínicas y la hipersensibilidad a varios elementos constitutivos dela dieta.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aFibrosos()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Gránulos de Fordyce</ion-card-title>
-      <p class="card-subtitle">
-        Los gránulos de fordyce son glándulas sebáceas ectópicas o coristomas sebáceos (tejido normal en localización
-        anormal).
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Se cree que estos gránulos se originan en las etapas del desarrollo.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aGranulos()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Tejido linfoide ectópico</ion-card-title>
-      <p class="card-subtitle">
-        Se puede encontrar tejido linfoide ectópico en un gran número de sitios en la boca.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        En condiciones normales, se presenta en el borde posterolateral de la lengua, donde se conoce como tonsila
-        lingual, se observan generalmente en el paladar blando, piso de boca y pilares tonsilares, aunque también se
-        pueden presentar en otros sitios.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aTejidoLinfoide()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Quistes gingivales</ion-card-title>
-      <p class="card-subtitle">
-        Los quistes gingivales de origen odontogeno se presenta en adultos y también en lactantes, la frecuencia
-        relativa es mayor en neonatos y a la edad de tres meses ya es raro detectar estos quistes. Su etiología se
-        origina en la lámina dental (restos de serres) en la submucosa gingival.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aQuistes()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Párulis</ion-card-title>
-      <p class="card-subtitle">
-        El párulis o “absceso de la encía” es un foco de pus en el tejido conectivo gingival y se deriva de una
-        infección aguda en la base de la bolsa periodontal ocluida o en el ápex de un diente desvitalizado.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        La lesión asume la forma de una tumefacción gingival de color amarillo blanquecino con eritema variable.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aParulis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Lipoma</ion-card-title>
-      <p class="card-subtitle">
-        El lipoma surge como una masa submucosa no inflamada de color amarillo o blanco amarillento.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Los lipomas son neoplasias infrecuentes de la cavidad bucal que pueden aparecer en cualquier región.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        La mucosa bucal, lengua y piso de la boca son algunos de los sitios más comunes.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aLipoma()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Párulis</ion-card-title>
+              <p class="card-subtitle">
+                El párulis o “absceso de la encía” es un foco de pus en el tejido conectivo gingival y se deriva de una
+                infección aguda en la base de la bolsa periodontal ocluida o en el ápex de un diente desvitalizado.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                La lesión asume la forma de una tumefacción gingival de color amarillo blanquecino con eritema variable.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aParulis(2,21)"
+                  [disabled]="!srv.validateTopic(ch2,20)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Lipoma</ion-card-title>
+              <p class="card-subtitle">
+                El lipoma surge como una masa submucosa no inflamada de color amarillo o blanco amarillento.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Los lipomas son neoplasias infrecuentes de la cavidad bucal que pueden aparecer en cualquier región.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                La mucosa bucal, lengua y piso de la boca son algunos de los sitios más comunes.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aLipoma(2,22)"
+                  [disabled]="!srv.validateTopic(ch2,21)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

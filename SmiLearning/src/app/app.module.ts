@@ -12,6 +12,12 @@ import { BibligrafiaPage } from '../pages/Bibliografias/bibligrafia/bibligrafia'
 import { LibrosConsultaPage } from '../pages/Bibliografias/libros-consulta/libros-consulta';
 import { SecuenciaDidacticaPage } from '../pages/Bibliografias/secuencia-didactica/secuencia-didactica';
 
+/**Contenido adicional, Videos y presentaciones */
+import { PresentContAdiPage } from '../pages/Contenido adicional/present-cont-adi/present-cont-adi';
+import { PresentacionesPage } from '../pages/Contenido adicional/presentaciones/presentaciones';
+import { VideosPage } from '../pages/Contenido adicional/videos/videos';
+
+
 /**Login y progress*/
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from '@angular/fire';
@@ -33,7 +39,8 @@ import { RegisterPage } from '../pages/Sesion/register/register';
 import { TabsPage } from '../pages/tabs/tabs';
 
 /**Chat foro para socializar ideas */
-import { ChatForoPage } from '../pages/chat-foro/chat-foro';
+import { ChatForoPage } from '../pages/Foro/chat-foro/chat-foro';
+import { PresentForoPage } from '../pages/Foro/present-foro/present-foro';
 
 /**Paginas post login */
 
@@ -152,8 +159,6 @@ import { PresentTema6Page } from '../pages/Temas/Tema 6/present-tema6/present-te
 import { Evalucion1T1Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion1-t1/evalucion1-t1';
 import { Evalucion2T2Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion2-t2/evalucion2-t2';
 import { Evalucion3T3Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion3-t3/evalucion3-t3';
-import { Evalucion4T4Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion4-t4/evalucion4-t4';
-import { Evalucion5T5Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion5-t5/evalucion5-t5';
 import { Practica1T1Page } from '../pages/Temas/Tema 6/Evaluaciones/practica1-t1/practica1-t1';
 import { Evaluacion3_2T3Page } from '../pages/Temas/Tema 6/Evaluaciones/evaluacion3-2-t3/evaluacion3-2-t3';
 
@@ -194,8 +199,14 @@ export const firebaseConfig = {
     LibrosConsultaPage,
     SecuenciaDidacticaPage,
 
+    /**Contenido adicional, Videos y presentaciones */
+    PresentContAdiPage,
+    PresentacionesPage,
+    VideosPage,
+
     /**Chat foro para socializar ideas */
     ChatForoPage,
+    PresentForoPage,
 
     /**Tema 1: Anatomia del periodonto */
 
@@ -287,8 +298,6 @@ export const firebaseConfig = {
     Evalucion1T1Page,
     Evalucion2T2Page,
     Evalucion3T3Page,
-    Evalucion4T4Page,
-    Evalucion5T5Page,
     Practica1T1Page,
     Evaluacion3_2T3Page,
 
@@ -328,8 +337,14 @@ export const firebaseConfig = {
     LibrosConsultaPage,
     SecuenciaDidacticaPage,
 
+    /**Contenido adicional, Videos y presentaciones */
+    PresentContAdiPage,
+    PresentacionesPage,
+    VideosPage,
+
     /**Chat foro para socializar ideas */
     ChatForoPage,
+    PresentForoPage,
 
     /**Tema 1: Anatomia del periodonto */
 
@@ -420,8 +435,6 @@ export const firebaseConfig = {
     Evalucion1T1Page,
     Evalucion2T2Page,
     Evalucion3T3Page,
-    Evalucion4T4Page,
-    Evalucion5T5Page,
     Practica1T1Page,
     Evaluacion3_2T3Page,
   ],

@@ -26,123 +26,104 @@
 
 <ion-content padding class="fondo">
 
-  <div class="content-button-menu">
-
-    <div class="tamImagen">
-      <img src="../../assets/imgs/PagPrincPresent1.png">
+    <div class="content-button-menu">
+  
+      <div class="tamImagen">
+        <img class="img-present" src="../../assets/imgs/PagPrincPresent1.png">
+      </div>
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="content-button">
+              <h4 class="text-button">Temas</h4>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button ion-button round item-end color="paua" (click)="aTemario()">
+                <img class="imgs" src="../../assets/icon/arrow-menu.png">
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <hr class="hr" />
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="content-button">
+              <h4 class="text-button">Biblioteca</h4>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button ion-button round item-end color="paua" (click)="aBusqueda()">
+                  <img class="imgs" src="../../assets/icon/arrow-menu.png">
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <hr class="hr" />
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="content-button">
+              <h4 class="text-button">Videos</h4>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button ion-button round item-end color="paua" (click)="aPresentContAdi()">
+                  <img class="imgs" src="../../assets/icon/arrow-menu.png">
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <hr class="hr" />
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="content-button">
+              <h4 class="text-button">Foro</h4>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button ion-button round item-end color="paua" (click)="aPresentForo()">
+                  <img class="imgs" src="../../assets/icon/arrow-menu.png">
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <hr class="hr" />
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="content-button">
+              <h4 class="text-button">Contenido adicional</h4>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button ion-button round item-end color="paua" (click)="aPresentBibliografia()">
+                  <img class="imgs" src="../../assets/icon/arrow-menu.png">
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
     </div>
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="content-button">
-            <h4 class="text-button">Temas</h4>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button ion-button round item-end color="paua" (click)="aTemario()">
-              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <hr class="hr" />
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="content-button">
-            <h4 class="text-button">Biblioteca</h4>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button ion-button round item-end color="paua" (click)="aBusqueda()">
-              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <hr class="hr" />
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="content-button">
-            <h4 class="text-button">Casos Clínicos</h4>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button ion-button round item-end color="paua" (click)="aPresentCasClin()">
-              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <hr class="hr" />
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="content-button">
-            <h4 class="text-button">Videos</h4>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button ion-button round item-end color="paua" (click)="aVideos()">
-              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <hr class="hr" />
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="content-button">
-            <h4 class="text-button">Foro</h4>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button ion-button round item-end color="paua" (click)="aForo()">
-              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <hr class="hr" />
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="content-button">
-            <h4 class="text-button">Contenido adicional</h4>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button ion-button round item-end color="paua" (click)="aPresentBibliografia()">
-              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-  </div>
-</ion-content>
+  </ion-content>

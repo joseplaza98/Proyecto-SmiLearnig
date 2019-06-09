@@ -9,6 +9,7 @@ import { TipCementPage } from '../tip-cement/tip-cement';
 
 import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
 import { Subscription } from 'rxjs';
+
 import { Evalucion1T1Page } from '../../Tema 6/Evaluaciones/evalucion1-t1/evalucion1-t1';
 import { Practica1T1Page } from '../../Tema 6/Evaluaciones/practica1-t1/practica1-t1';
 import { TemarioPage } from '../../../temario/temario';
@@ -47,7 +48,7 @@ export class AnaPeriodontoPage {
   ch3: ChapterProgress = { progress: 0, topics: [] };
   ch4: ChapterProgress = { progress: 0, topics: [] };
   ch5: ChapterProgress = { progress: 0, topics: [] };
-  ch6: ChapterProgress = { progress: 0, topics: [] };
+  
 
   subs: Subscription;
 
@@ -207,7 +208,6 @@ export class AnaPeriodontoPage {
         this.ch3 = x.ch3;
         this.ch4 = x.ch4;
         this.ch5 = x.ch5;
-        this.ch6 = x.ch6;
       });
   }
 

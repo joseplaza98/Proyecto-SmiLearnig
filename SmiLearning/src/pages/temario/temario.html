@@ -15,7 +15,6 @@
           <ion-avatar slot="end">
             <img src="../../assets/icon/home.png">
           </ion-avatar>
-          <ion-label>Temario</ion-label>
         </ion-chip>
       </button>
     </ion-buttons>
@@ -26,182 +25,185 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-      <img src="../../assets/imgs/cap1img.jpg" />
-      <ion-card-title class="card-title"> Tema 1</ion-card-title>
-      <ion-card-title class="card-title">Anatomía del periodonto</ion-card-title>
-      <p class="card-subtitle">El periodonto, también llamado “aparato de inserción” o “tejidos
-        de sostén del diente”, establece una unidad funcional, biológica y evolutiva que experimenta algunas
-        modificaciones con la edad y, además está sujeta a alteraciones morfológicas y funcionales, así como a
-        modificaciones debidas a alteraciones del medio bucal.</p>
-    </ion-card-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card class="card">
+            <ion-card-content>
+              <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
+              <img class="imgs" src="../../assets/imgs/cap1img.jpg" />
+              <ion-card-title class="card-title"> Tema 1</ion-card-title>
+              <ion-card-title class="card-title">Anatomía del periodonto</ion-card-title>
+              <p class="card-subtitle">El periodonto, también llamado “aparato de inserción” o “tejidos
+                de sostén del diente”, establece una unidad funcional, biológica y evolutiva que experimenta algunas
+                modificaciones con la edad y, además está sujeta a alteraciones morfológicas y funcionales, así como a
+                modificaciones debidas a alteraciones del medio bucal.</p>
+            </ion-card-content>
 
-    <ion-card-content *ngIf="ocultar1">
-      <ion-title>Tu progreso</ion-title>
-        <ion-item class="button-content">
-            <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch1.progress" color="primary">
-              <ion-badge range-right> {{ch1.progress}}%</ion-badge>
-            </ion-range>
-          </ion-item>
-    </ion-card-content>
-    <ion-card-content>
-
-      <div class="content-button">
-          <button ion-button outline round color="green" (click)="accion1()">
-              {{ !ocultar1 ? 'Ver Avance' : 'Ocultar Avance' }}
-            </button>
-            <button ion-button outline round color="green" round style="align-content: flex"
-              (click)="aPresentAnaPeriodonto()">Ver Tema</button>
-         </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-      <img src="../../assets/imgs/cap2Patologias2.jpg" />
-      <ion-card-title class="card-title">Tema 2</ion-card-title>
-      <ion-card-title class="card-title">Patología bucal</ion-card-title>
-      <p class="card-subtitle">Es una rama de la odontología que se encarga de la naturaleza, identificación y
-        tratamiento de las alteraciones y enfermedades localizadas en la cavidad oral, maxilar, mandíbula y órganos
-        dentarios.</p>
-    </ion-card-content>
-    <ion-card-content *ngIf="ocultar2">
-        <ion-title>Tu progreso</ion-title>
-          <ion-item class="button-content">
-              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch2.progress" color="primary">
-                <ion-badge range-right> {{ch2.progress}}%</ion-badge>
-              </ion-range>
-            </ion-item>
-      </ion-card-content>
-      <ion-card-content>
-  
-        <div class="content-button">
-            <button ion-button outline round color="green" color="green" (click)="accion2()">
-                {{ !ocultar2 ? 'Ver Avance' : 'Ocultar Avance' }}
-              </button>
-              <button ion-button outline round color="green" round style="align-content: flex"
-              (click)="aPatoBucal()">Ver Tema</button>
-           </div>
-      </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-      <img src="../../assets/imgs/cap3Laboratioros.PNG">
-      <ion-card-title class="card-title">Tema 3</ion-card-title>
-      <ion-card-title class="card-title">Laboratorios y exámenes</ion-card-title>
-      <p class="card-subtitle">Los análisis clínicos son un espacio que tiene como objetivo realizar análisis clínicos
-        que aporten datos a la prevención, estudio o diagnóstico de posibles problemas en la salud de los pacientes que
-        los realizan.</p>
-    </ion-card-content>
-    <ion-card-content *ngIf="ocultar3">
-        <ion-title>Tu progreso</ion-title>
-          <ion-item class="button-content">
-              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch3.progress" color="primary">
-                <ion-badge range-right> {{ch3.progress}}%</ion-badge>
-              </ion-range>
-            </ion-item>
-      </ion-card-content>
-      <ion-card-content>
-        <div class="content-button">
-            <button ion-button outline round color="green" color="green" (click)="accion3()">
-                {{ !ocultar3 ? 'Ver Avance' : 'Ocultar Avance' }}
-              </button>
-              <button ion-button outline round color="green" round style="align-content: flex"
-              (click)="aPresentTem3()">Ver Tema</button>
-           </div>
-      </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-      <img src="../../assets/imgs/cap4CorrClinPa.jpg" />
-      <ion-card-title class="card-title">Tema 4</ion-card-title>
-      <ion-card-title class="card-title">Correlación Clínico-Patológica</ion-card-title>
-      <br/>
-      <p class="card-subtitle">Examen e interpretacíon histológicos, diagnóstico histopatológico, patología bucal, clínica de atención a displasias orales.</p>
-    </ion-card-content>
-
-    <ion-card-content *ngIf="ocultar4">
-      <ion-title>Tu progreso</ion-title>
-          <ion-item class="button-content">
-            <ion-range min="0" max="100" disabled step="10" snaps="true"   [(ngModel)]="ch3.progress" color="primary">
-                <ion-badge range-right> {{ch4.progress}}%</ion-badge>
-              </ion-range>
-               </ion-item>
-                </ion-card-content>
-     <ion-card-content>
-    
-          <div class="content-button">
-            
-              <button ion-button outline round color="green" color="green" (click)="accion4()">
-             {{ !ocultar4 ? 'Ver Avance' : 'Ocultar Avance' }}
-              </button>
-              <button ion-button outline round color="green" round style="align-content: flex"
-            (click)="aPresentClinPa()">Ver Tema</button>
-          </div>
-    </ion-card-content>
-    
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-      <img src="../../assets/imgs/PagPrinc4.jpg" />
-      <ion-card-title class="card-title">Tema 5</ion-card-title>
-      <ion-card-title class="card-title">Presentación de casos clínicos</ion-card-title>
-      <p class="card-subtitle">Es la presentación comentada de la situación sanitaria de un paciente, o grupo de pacientes, que se ejemplifica como «caso»</p>
-    </ion-card-content>
-    <ion-card-content *ngIf="ocultar5">
-        <ion-title>Tu progreso</ion-title>
-          <ion-item class="button-content">
-              <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch4.progress" color="primary">
-                <ion-badge range-right> {{ch4.progress}}%</ion-badge>
-              </ion-range>
-            </ion-item>
-      </ion-card-content>
-      <ion-card-content>
-  
-        <div class="content-button">
-            <button ion-button outline round color="green" color="green" (click)="accion5()">
-                {{ !ocultar5 ? 'Ver Avance' : 'Ocultar Avance' }}
-              </button>
-              <button ion-button outline round color="green" round style="align-content: flex"
-              (click)="aPresentCasClin()">Ver Tema</button>
-           </div>
-      </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-      <ion-card-content>
-        <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-        <img src="../../assets/imgs/Tema2.jpg" />
-        <ion-card-title class="card-title">Evaluaciones</ion-card-title>
-      </ion-card-content>
-      <ion-card-content *ngIf="ocultar6">
-          <ion-title>Tu progreso</ion-title>
-            <ion-item class="button-content">
-                <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch6.progress" color="primary">
-                  <ion-badge range-right> {{ch6.progress}}%</ion-badge>
+            <ion-card-content *ngIf="ocultar1">
+              <ion-title>Tu progreso</ion-title>
+              <ion-item class="button-content">
+                <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch1.progress" color="primary">
+                  <ion-badge range-right> {{ch1.progress}}%</ion-badge>
                 </ion-range>
               </ion-item>
-        </ion-card-content>
-        <ion-card-content>
-    
-          <div class="content-button">
-              <button ion-button outline round color="green" color="green" (click)="accion6()">
-                  {{ !ocultar6 ? 'Ver Avance' : 'Ocultar Avance' }}
+            </ion-card-content>
+            <ion-card-content>
+
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="accion1()">
+                  {{ !ocultar1 ? 'Ver Avance' : 'Ocultar Avance' }}
                 </button>
                 <button ion-button outline round color="green" round style="align-content: flex"
-                  (click)="aPresentTema6()">Ver Tema</button>
-             </div>
-        </ion-card-content>
-    </ion-card>
+                  (click)="aPresentAnaPeriodonto(1,1)">Ver Tema</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
+              <img class="imgs" src="../../assets/imgs/cap2Patologias2.jpg" />
+              <ion-card-title class="card-title">Tema 2</ion-card-title>
+              <ion-card-title class="card-title">Patología bucal</ion-card-title>
+              <p class="card-subtitle">Es una rama de la odontología que se encarga de la naturaleza, identificación y
+                tratamiento de las alteraciones y enfermedades localizadas en la cavidad oral, maxilar, mandíbula y
+                órganos
+                dentarios.</p>
+            </ion-card-content>
+            <ion-card-content *ngIf="ocultar2">
+              <ion-title>Tu progreso</ion-title>
+              <ion-item class="button-content">
+                <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch2.progress" color="primary">
+                  <ion-badge range-right> {{ch2.progress}}%</ion-badge>
+                </ion-range>
+              </ion-item>
+            </ion-card-content>
+            <ion-card-content>
 
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="accion2()">
+                  {{ !ocultar2 ? 'Ver Avance' : 'Ocultar Avance' }}
+                </button>
+                <button ion-button outline round color="green" round style="align-content: flex"
+                  (click)="aPatoBucal(2,1)" [disabled]="!srv.validateTopic(ch1, 29)">Ver Tema</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" pull-md="9">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
+              <img class="imgs" src="../../assets/imgs/cap3Laboratioros.PNG">
+              <ion-card-title class="card-title">Tema 3</ion-card-title>
+              <ion-card-title class="card-title">Laboratorios y exámenes</ion-card-title>
+              <p class="card-subtitle">Los análisis clínicos son un espacio que tiene como objetivo realizar análisis
+                clínicos
+                que aporten datos a la prevención, estudio o diagnóstico de posibles problemas en la salud de los
+                pacientes que
+                los realizan.</p>
+            </ion-card-content>
+            <ion-card-content *ngIf="ocultar3">
+              <ion-title>Tu progreso</ion-title>
+              <ion-item class="button-content">
+                <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch3.progress" color="primary">
+                  <ion-badge range-right> {{ch3.progress}}%</ion-badge>
+                </ion-range>
+              </ion-item>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="accion3()">
+                  {{ !ocultar3 ? 'Ver Avance' : 'Ocultar Avance' }}
+                </button>
+                <button ion-button outline round color="green" round style="align-content: flex"
+                  (click)="aPresentTem3(3,1)" [disabled]="!srv.validateTopic(ch2,30)">Ver Tema</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
+              <img class="imgs" src="../../assets/imgs/cap4CorrClinPa.jpg" />
+              <ion-card-title class="card-title">Tema 4</ion-card-title>
+              <ion-card-title class="card-title">Correlación Clínico-Patológica</ion-card-title>
+              <p class="card-subtitle"> Examen e interpretación histológicos, diagnóstico histopatológico, patología
+                bucal,
+                clínica de atención a displasias orales .</p>
+            </ion-card-content>
+
+            <ion-card-content *ngIf="ocultar4">
+              <ion-title>Tu progreso</ion-title>
+              <ion-item class="button-content">
+                <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch3.progress" color="primary">
+                  <ion-badge range-right> {{ch4.progress}}%</ion-badge>
+                </ion-range>
+              </ion-item>
+            </ion-card-content>
+            <ion-card-content>
+
+              <div class="content-button">
+
+                <button ion-button outline round color="green" (click)="accion4()">
+                  {{ !ocultar4 ? 'Ver Avance' : 'Ocultar Avance' }}
+                </button>
+                <button ion-button outline round color="green" round style="align-content: flex"
+                  (click)="aPresentClinPa(4,1)" [disabled]="!srv.validateTopic(ch3,9)">Ver Tema</button>
+              </div>
+            </ion-card-content>
+
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <!-- <a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
+              <img class="imgs" src="../../assets/imgs/PagPrinc4.jpg" />
+              <ion-card-title class="card-title">Tema 5</ion-card-title>
+              <ion-card-title class="card-title">Presentación de casos clínicos</ion-card-title>
+              <p class="card-subtitle">Es la presentación comentada de la situación sanitaria de un paciente, o grupo de
+                pacientes, que se ejemplifica como «caso».</p>
+            </ion-card-content>
+            <ion-card-content *ngIf="ocultar5">
+              <ion-title>Tu progreso</ion-title>
+              <ion-item class="button-content">
+                <ion-range min="0" max="100" disabled step="10" snaps="true" [(ngModel)]="ch5.progress" color="primary">
+                  <ion-badge range-right> {{ch5.progress}}%</ion-badge>
+                </ion-range>
+              </ion-item>
+            </ion-card-content>
+            <ion-card-content>
+
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="accion5()">
+                  {{ !ocultar5 ? 'Ver Avance' : 'Ocultar Avance' }}
+                </button>
+                <button ion-button outline round color="green" round style="align-content: flex"
+                  (click)="aPresentCasClin(5,1)" [disabled]="!srv.validateTopic(ch4,5)">Ver Tema</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

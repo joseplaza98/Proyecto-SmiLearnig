@@ -20,18 +20,18 @@
       <img src="../../../../assets/imgs/cap2Patologias.jpg" />
       <ion-card-title class="card-title">Resumen Clínico</ion-card-title>
       <p class="card-subtitle">
-        Un resumen clinico es el documento elaborado por un médico, en el cual se registrarán los aspectos relevantes de
+        Un resumen clínico es el documento elaborado por un médico, en el cual se registrarán los aspectos relevantes de
         la atención médica
         de un paciente, contenidos en el expediente clínico.
       </p>
       <br />
       <p class="card-subtitle">
-        A continuacion observará la clasificación clínica de las enfermedades de los tejidos blandos en boca.
+        A continuación, observará la clasificación clínica de las enfermedades de los tejidos blandos en boca.
       </p>
     </ion-card-content>
     <ion-card-content>
       <div class="content-button">
-        <button ion-button outline round color="green" (click)="aLesionesBlancas()">Ver</button>
+        <button ion-button outline round color="green" (click)="aLesionesBlancas(2,3)" [disabled]="!srv.validateTopic(ch2, 2)">Ver</button>
       </div>
     </ion-card-content>
   </ion-card>

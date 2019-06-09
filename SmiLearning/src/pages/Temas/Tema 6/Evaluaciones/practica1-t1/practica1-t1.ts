@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { PagPrincipalPage } from '../../../../pag-principal/pag-principal';
 
 /**
  * Generated class for the Practica1T1Page page.
@@ -18,6 +19,10 @@ export class Practica1T1Page {
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
+  aPagPrinc(){
+    this.navCtrl.setRoot(PagPrincipalPage);
+  }
+  
   ionViewDidLoad() {
     const loader = this.loadingCtrl.create({
       content: "Espere un momento...",

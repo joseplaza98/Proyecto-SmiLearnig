@@ -15,31 +15,54 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Home4.jpg">
-      <ion-card-title class="card-title">Introducción</ion-card-title>
-      <p class="card-subtitle"><strong>Resumen clínico:</strong> Lesiones blancas, lesiones reactivas, otras lesiones
-        blancas, lesiones
-        epiteliales blanco amarillentas.</p>
-      <br />
-      <div class="card-item">
-        <p class="card-subtitle"><strong>Palabras claves:</strong></p>
-        <br />
-        <p class="card-subtitle">• Leucoplaquia.</p>
-        <p class="card-subtitle">• Maculas.</p>
-        <p class="card-subtitle">• Muget.</p>
-        <p class="card-subtitle">• Papilomas.</p>
-        <br/>
-        <p class="card-subtitle"><strong>Bibliografia: </strong>(Regezi &amp; Sciubba., 2000.)</p>
-      </div>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" round style="align-content: flex"
-          (click)="aContenidoTema()">Aprender</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Introducción</ion-card-title>
+              <p class="card-subtitle"><strong>Resumen clínico:</strong> Lesiones blancas, lesiones reactivas, otras
+                lesiones
+                blancas, lesión
+                epitelial blanco amarillenta.</p>
+              <br />
+              <div class="card-item">
+                <p class="card-subtitle"><strong>Palabras claves:</strong></p>
+                <br />
+                <p class="card-subtitle">• Leucoplaquia.</p>
+                <p class="card-subtitle">• Maculas.</p>
+                <p class="card-subtitle">• Muget.</p>
+                <p class="card-subtitle">• Papilomas.</p>
+                <br />
+                <p class="card-subtitle"><strong>Bibliografia: </strong>(Regezi &amp; Sciubba., 2000.)</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Descripción</ion-card-title>
+              <p class="card-subtitle">Las lesiones de color blanco en la mucosa bucal deben su aspecto característico a la
+                dispersión de la luz a traves de una superficie alterada. a continuación vera este y muchos más temas relacionados.</p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" round style="align-content: flex"
+                  (click)="aContenidoTema(2,2)" [disabled]="!srv.validateTopic(ch2, 1)">Aprender</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
 </ion-content>

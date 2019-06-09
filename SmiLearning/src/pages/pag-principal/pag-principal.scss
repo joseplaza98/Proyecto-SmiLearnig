@@ -1,5 +1,17 @@
 page-pag-principal {
 
+    .img-present{
+        border-radius: 77px 77px 77px 77px;
+        -moz-border-radius: 77px 77px 77px 77px;
+        -webkit-border-radius: 77px 77px 77px 77px;
+        border: 0px solid #000000;
+    }
+
+    .imgs{
+        width: 20px;
+        height: 20px;
+    }
+
     .card-title{
         font-family: Futura,Trebuchet MS,Arial,sans-serif; 
         text-align: justify;
@@ -56,6 +68,7 @@ page-pag-principal {
         font-style: italic;
         font-size: 100%;
         }
+
 
 
 }

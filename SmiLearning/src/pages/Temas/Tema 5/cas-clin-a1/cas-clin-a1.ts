@@ -27,4 +27,5 @@ export class CasClinA1Page {
     console.log('ionViewDidLoad CasClinA1Page');
   }
 
+
 }

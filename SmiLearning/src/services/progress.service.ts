@@ -3,12 +3,11 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Observable, Subscriber } from "rxjs";
 
-const TOPIC_CHAPTER_1 = 27;
-const TOPIC_CHAPTER_2 = 14;
-const TOPIC_CHAPTER_3 = 16;
-const TOPIC_CHAPTER_4 = 11;
-const TOPIC_CHAPTER_5 = 4;
-const TOPIC_CHAPTER_6 = 4;
+const TOPIC_CHAPTER_1 = 29;
+const TOPIC_CHAPTER_2 = 30;
+const TOPIC_CHAPTER_3 = 9;
+const TOPIC_CHAPTER_4 = 5;
+const TOPIC_CHAPTER_5 = 3;
 
 @Injectable()
 export class ProgressService {
@@ -29,8 +28,7 @@ export class ProgressService {
                         ch2: { progress: 0, topics: [] },
                         ch3: { progress: 0, topics: [] },
                         ch4: { progress: 0, topics: [] },
-                        ch5: { progress: 0, topics: [] },
-                        ch6: { progress: 0, topics: [] }
+                        ch5: { progress: 0, topics: [] }
                     });
                 } else {
                     const ch1 = obj.ch1 ? obj.ch1 : [];
@@ -38,15 +36,13 @@ export class ProgressService {
                     const ch3 = obj.ch3 ? obj.ch3 : [];
                     const ch4 = obj.ch4 ? obj.ch4 : [];
                     const ch5 = obj.ch5 ? obj.ch5 : [];
-                    const ch6 = obj.ch6 ? obj.ch6 : [];
                     emitter.next({
-                        total: Math.round((ch1.length + ch2.length + ch3.length + ch4.length + ch5.length + ch6.length) * 100 / (TOPIC_CHAPTER_1 + TOPIC_CHAPTER_2 + TOPIC_CHAPTER_3 + TOPIC_CHAPTER_4 + TOPIC_CHAPTER_5 + TOPIC_CHAPTER_6)),
+                        total: Math.round((ch1.length + ch2.length + ch3.length + ch4.length + ch5.length) * 100 / (TOPIC_CHAPTER_1 + TOPIC_CHAPTER_2 + TOPIC_CHAPTER_3 + TOPIC_CHAPTER_4 + TOPIC_CHAPTER_5)),
                         ch1: { progress: Math.round((ch1.length * 100 / TOPIC_CHAPTER_1)), topics: ch1 },
                         ch2: { progress: Math.round((ch2.length * 100 / TOPIC_CHAPTER_2)), topics: ch2 },
                         ch3: { progress: Math.round((ch3.length * 100 / TOPIC_CHAPTER_3)), topics: ch3 },
                         ch4: { progress: Math.round((ch4.length * 100 / TOPIC_CHAPTER_4)), topics: ch4 },
-                        ch5: { progress: Math.round((ch5.length * 100 / TOPIC_CHAPTER_5)), topics: ch5 },
-                        ch6: { progress: Math.round((ch6.length * 100 / TOPIC_CHAPTER_6)), topics: ch6 }
+                        ch5: { progress: Math.round((ch5.length * 100 / TOPIC_CHAPTER_5)), topics: ch5 }
                     });
                 }
 
@@ -76,8 +72,7 @@ export class ProgressService {
                         ch2: [],
                         ch3: [],
                         ch4: [],
-                        ch5: [],
-                        ch6: []
+                        ch5: []
                     };
                 }
                 console.log('OBJ 1=>' + JSON.stringify(obj));
@@ -107,7 +102,6 @@ export class Progress {
     ch3: ChapterProgress;
     ch4: ChapterProgress;
     ch5: ChapterProgress;
-    ch6: ChapterProgress;
 }
 
 class UserProgress {
@@ -116,5 +110,4 @@ class UserProgress {
     ch3?: number[];
     ch4?: number[];
     ch5?: number[];
-    ch6?: number[];
 }

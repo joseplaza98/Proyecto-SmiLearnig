@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { PagPrincipalPage } from '../../../../pag-principal/pag-principal';
 
 /**
  * Generated class for the Evalucion2T2Page page.
@@ -16,6 +17,10 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 export class Evalucion2T2Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  }
+
+  aPagPrinc(){
+    this.navCtrl.setRoot(PagPrincipalPage);
   }
 
   ionViewDidLoad() {

@@ -33,7 +33,7 @@
     </ion-card-content>
     <ion-card-content>
       <div class="content-button">
-        <button ion-button outline round color="green" (click)="aPatobuc()">Ver</button>
+        <button ion-button outline round color="green" (click)="aPatobuc(3,6)" [disabled]="!srv.validateTopic(ch3,5)">Ver</button>
       </div>
     </ion-card-content>
   </ion-card>

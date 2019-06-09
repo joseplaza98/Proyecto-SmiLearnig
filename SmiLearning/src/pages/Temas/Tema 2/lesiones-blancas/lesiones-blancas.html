@@ -15,7 +15,6 @@
           <ion-avatar slot="end">
             <img src="../../../../assets/icon/home.png">
           </ion-avatar>
-          <ion-label>Temario</ion-label>
         </ion-chip>
       </button>
     </ion-buttons>
@@ -26,83 +25,123 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Lesiones blancas</ion-card-title>
-      <p class="card-subtitle">
-        Las lesiones de color blanco en la mucosa bucal deben su aspecto característico a la dispersión de la luz a
-        traves de una superficie alterada.
-      </p>
-      <br />
-      <p class="card-subtitle">
-        Estas anormalidades pueden ser resultado del engrosamiento de la capa de
-        queratina, hiperplasia del epitelio en el estrato de Malpighi, edema intracelular de las células epiteliales y
-        disminución de la vascularidad del tejido conectivo subyacente.</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aPresentEnfHer()">Ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Lesiones reactivas</ion-card-title>
-      <p class="card-subtitle">
-        Son aquellas que se deben a traumatismo mecánico accidental o irritación crónica, y si se consideran los
-        antecedentes clínicos, la relación causa-efecto es evidente.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aPresentLesReac()">Ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Lesiones blancas</ion-card-title>
+              <p class="card-subtitle">
+                Las lesiones de color blanco en la mucosa bucal deben su aspecto característico a la dispersión de la
+                luz a
+                través de una superficie alterada.
+              </p>
+              <br />
+              <p class="card-subtitle">
+                Estas anormalidades pueden ser resultado del engrosamiento de la capa de
+                queratina, hiperplasia del epitelio en el estrato de Malpighi, edema intracelular de las células
+                epiteliales y
+                disminución de la bascularía del tejido conectivo subyacente.</p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aPresentEnfHer(2,4)"
+                  [disabled]="!srv.validateTopic(ch2,3)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Lesiones reactivas</ion-card-title>
+              <p class="card-subtitle">
+                Son aquellas que se deben a traumatismo mecánico accidental o irritación crónica, y si se consideran los
+                antecedentes clínicos, la relación causa-efecto es evidente.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aPresentLesReac(2,9)"
+                  [disabled]="!srv.validateTopic(ch2,8)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Lesiones no epiteliales blanco amarillentas.</ion-card-title>
-      <p class="card-subtitle">
-        Las manifestaciones bucales de esta enfermedad son variables y se han identificado un gran número de formas, la más común es
-        la seudomembranosa aguda; también conocida como algodoncillo.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aPresentLesNoEpit()">Ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Lesiones no epiteliales blanco-amarillentas.</ion-card-title>
+              <p class="card-subtitle">
+                Las manifestaciones bucales de esta enfermedad son variables y se han identificado un gran número de
+                formas, la más común es
+                la seudomembranosa aguda; también conocida como algodoncillo.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aPresentLesNoEpit(2,14)"
+                  [disabled]="!srv.validateTopic(ch2,13)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Otras lesiones blancas</ion-card-title>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="apresnetOtros(2,23)"
+                  [disabled]="!srv.validateTopic(ch2,22)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Otras lesiones blancas</ion-card-title>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="apresnetOtros()">Ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/home2.jpg">
-      <ion-card-title class="card-title">Evaluación</ion-card-title>
-      <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aEva2T2()">Evaluación</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="12" push-md="12">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/home2.jpg">
+              <ion-card-title class="card-title">Evaluación</ion-card-title>
+              <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aEva2T2(2,30)"
+                  [disabled]="!srv.validateTopic(ch2,29)">Evaluación</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 </ion-content>

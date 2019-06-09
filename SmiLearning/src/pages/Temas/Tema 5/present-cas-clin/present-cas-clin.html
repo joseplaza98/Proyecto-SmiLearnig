@@ -37,21 +37,8 @@
     </ion-card-content>
     <ion-card-content>
       <div class="content-button">
-        <button ion-button outline round color="green" (click)="aSeccionCasClin()">Anexo A1</button>
-        <button ion-button outline round color="green" (click)="aCasClinA1()">Anexo A2</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/home2.jpg">
-      <ion-card-title class="card-title">Evaluación</ion-card-title>
-      <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aEva5T5()">Evaluación</button>
+        <button ion-button outline round color="green" (click)="aSeccionCasClin(5,2)" [disabled]="!srv.validateTopic(ch5,1)">Anexo A1</button>
+        <button ion-button outline round color="green" (click)="aCasClinA1(5,3)" [disabled]="!srv.validateTopic(ch5,2)">Anexo A2</button>
       </div>
     </ion-card-content>
   </ion-card>

@@ -15,79 +15,106 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Home4.jpg" />
-      <ion-card-title class="card-title">Laboratorio y examenes</ion-card-title>
-      <p class="card-subtitle"><strong>Descripcion:</strong> Las prácticas de laboratorio son un elemento fundamental
-        del aprendizaje de las ciencias,
-        considerando la naturaleza teorico practica de las mismas.</p>
-      <br />
-      <p class="card-subtitle">Con la guía de practica en el laboratorio de periodoncia es residente identifica las
-        estructuras anatómicas periodontales
-        en tratamientos especializados.</p>
-      <br />
-      <div class="card-item">
-        <p class="card-subtitle"><strong>Palabras claves:</strong></p>
-        <br />
-        <p class="card-subtitle">• Principios histológicos generales.</p>
-        <p class="card-subtitle">• Tejidos primarios.</p>
-      </div>
-      <br />
-      <div class="card-item">
-        <p class="card-subtitle"><strong>Bibliografía:</strong></p>
-        <br />
-        <p class="card-subtitle">• (Leson & Paparo, 1990.).</p>
-      </div>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aExamenLab()">Ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Home4.jpg" />
+              <ion-card-title class="card-title">Laboratorio y examenes</ion-card-title>
+              <p class="card-subtitle"><strong>Descripción:</strong> Las prácticas de laboratorio son un elemento
+                fundamental
+                del aprendizaje de las ciencias, considerando la naturaleza teórica practica de las mismas.</p>
+              <br />
+              <p class="card-subtitle">Con la guía de practica en el laboratorio de periodoncia es residente identifica
+                las
+                estructuras anatómicas periodontales
+                en tratamientos especializados.</p>
+              <br />
+              <div class="card-item">
+                <p class="card-subtitle"><strong>Palabras claves:</strong></p>
+                <br />
+                <p class="card-subtitle">• Principios histológicos generales.</p>
+                <p class="card-subtitle">• Tejidos primarios.</p>
+              </div>
+              <br />
+              <div class="card-item">
+                <p class="card-subtitle"><strong>Bibliografía:</strong></p>
+                <br />
+                <p class="card-subtitle">• (Leson & Paparo, 1990.).</p>
+              </div>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aExamenLab(3,2)"
+                  [disabled]="!srv.validateTopic(ch3,1)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Home4.jpg" />
+              <ion-card-title class="card-title">Laboratorio patología bucal</ion-card-title>
+              <p class="card-subtitle"><strong>Descripcion:</strong> En el laboratorio de histopatología bucal se
+                realizan
+                prácticas de laboratorio en relación con
+                enfermedades benignas, malignas, infecciosas, reactivas y manifestaciones de
+                enfermedades sistémicas.
+              </p>
+              <br />
+              <div class="card-item">
+                <p class="card-subtitle"><strong>Palabras claves:</strong></p>
+                <br />
+                <p class="card-subtitle">• Biología periodontal.</p>
+              </div>
+              <br />
+              <div class="card-item">
+                <p class="card-subtitle"><strong>Bibliografía:</strong></p>
+                <br />
+                <p class="card-subtitle">• (Regezi & Sciubba., 2000.), Journal Oral Pathology.</p>
+              </div>
+              <br />
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aLabucal(3,5)"
+                  [disabled]="!srv.validateTopic(ch3,4)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Home4.jpg" />
-      <ion-card-title class="card-title">Laboratorio patología bucal</ion-card-title>
-      <p class="card-subtitle"><strong>Descripcion:</strong> En el laboratorio de histopatología bucal se realizan
-        prácticas de laboratorio en relacion con
-        enfermedades benignas, malignas, infecciosas, reactivas y manifestaciones de
-        enfermedades sistémicas.</p>
-      <br />
-      <div class="card-item">
-        <p class="card-subtitle"><strong>Palabras claves:</strong></p>
-        <br />
-        <p class="card-subtitle">• Biología periodontal.</p>
-      </div>
-      <br />
-      <div class="card-item">
-        <p class="card-subtitle"><strong>Bibliografía:</strong></p>
-        <br />
-        <p class="card-subtitle">• (Regezi & Sciubba., 2000.), Journal Oral Pathology.</p>
-      </div>
-      <br />
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aLabucal()">Ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/home2.jpg">
-      <ion-card-title class="card-title">Evaluación</ion-card-title>
-      <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aEva3T3a()">Parte I</button>
-        <button ion-button outline round color="green" (click)="aEva3T3b()">Parte II</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="12" pull-md="12">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/home2.jpg">
+              <ion-card-title class="card-title">Evaluación</ion-card-title>
+              <p class="card-subtitle">Realiza la siguiente evaluación y comprueba tu aprendizaje sobre esta sección.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aEva3T3a(3,8)"
+                  [disabled]="!srv.validateTopic(ch3,7)">Parte I</button>
+                <button ion-button outline round color="green" (click)="aEva3T3b(3,9)"
+                  [disabled]="!srv.validateTopic(ch3,8)">Parte II</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -8,59 +8,84 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <!--<a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
-      <img src="../../assets/imgs/home3.jpg" />
-      <ion-card-title class="card-title">Propósito</ion-card-title>
-      <p class="card-subtitle">SmiLearning app, es tu plataforma de aprendizaje movil donde encontrará temas importantes
-        sobre
-        Periodoncia de manera didactica basada en tecnología educativa.</p>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <!--<a href="https://www.freepik.es/fotos-vectores-gratis/personas">Foto de personas creado por freepik - www.freepik.es</a>-->
+              <img src="../../assets/imgs/home3.jpg" />
+              <ion-card-title class="card-title">Propósito</ion-card-title>
+              <p class="card-subtitle">SmiLearning app, es tu plataforma de aprendizaje movil donde encontrará temas
+                importantes
+                sobre
+                Periodoncia de manera didactica basada en tecnología educativa.</p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Consentimiento informado</ion-card-title>
+              <p class="card-subtitle">En este segmento se le realiza al usuario un consentimeinto informado en donde se
+                le da a
+                conocer que es objeto
+                de estudio mediante sus acciones dentro de la aplicación y evaluaciones con el fin de extraer
+                estadisticas que
+                darán fortaleza a la investigación en curso.</p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aConsentimientoInfo()">Leer</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../assets/imgs/Home4.jpg">
-      <ion-card-title class="card-title">Consentimiento informado</ion-card-title>
-      <p class="card-subtitle">En este segmento se le realiza al usuario un consentimeinto informado en donde se le da a
-        conocer que es objeto
-        de estudio mediante sus acciones dentro de la aplicación y evaluaciones con el fin de extraer estadisticas que
-        darán fortaleza a la investigación en curso.</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aConsentimientoInfo()">Leer</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../assets/imgs/Home4.jpg">
-      <ion-card-title class="card-title">Terminos y condiciones</ion-card-title>
-      <p class="card-subtitle">A continuación encontrará los terminos y condiciones de uso de SmiLearning App.</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aTerminCond()">Leer</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <img src="../../assets/imgs/Home4.jpg">
-      <ion-card-title class="card-title">Derechos de autor</ion-card-title>
-      <p class="card-subtitle">En este segmento encontrará los derechos de autor y propiedad de SmiLearning App</p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" (click)="aDerAuto()">Leer</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Terminos y condiciones</ion-card-title>
+              <p class="card-subtitle">A continuación encontrará los terminos y condiciones de uso de SmiLearning App.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aTerminCond()">Leer</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../assets/imgs/Home4.jpg">
+              <ion-card-title class="card-title">Derechos de autor</ion-card-title>
+              <p class="card-subtitle">En este segmento encontrará los derechos de autor y propiedad de SmiLearning App
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aDerAuto()">Leer</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

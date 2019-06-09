@@ -15,70 +15,100 @@
 
 <ion-content padding class="fondo">
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Hiperqueratosis focal (friccional)</ion-card-title>
-      <p class="card-subtitle">
-        Es una lesión blanca clasificada a menudo bajo el termino clinico general de leucoplaquia, tiene una relacion
-        causa–efecto, a diferencia de las leucoplaquias idiopáticas (causa desconocida).
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aHiperquerosis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Hiperqueratosis focal (friccional)</ion-card-title>
+              <p class="card-subtitle">
+                Es una lesión blanca clasificada a menudo bajo el termino clínico general de leucoplaquia, tiene una
+                relación
+                causa–efecto, a diferencia de las leucoplaquias idiopáticas (causa desconocida).
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aHiperquerosis(2,10)"
+                  [disabled]="!srv.validateTopic(ch2,9)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Lesiones blancas relacionadas con tabaco no fumado</ion-card-title>
+              <p class="card-subtitle">
+                Las lesiones blancas de la mucosa bucal vinculadas con tabaco no fumado se desarrollan en el área
+                inmediata
+                donde suele colocarse el tabaco, el área afectada con mayor frecuencia es el pliegue mucobucal dela
+                mandibular,
+                en la región de incisivos o molares.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aLesionesTabaco(2,11)"
+                  [disabled]="!srv.validateTopic(ch2,10)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Lesiones blancas relacionadas con tabaco no fumado</ion-card-title>
-      <p class="card-subtitle">
-        Las lesiones blancas de la mucosa bucal vinculadas con tabaco no fumado se desarrollan en el área inmediata
-        donde suele colocarse el tabaco, el área afectada con mayor frecuencia es el pliegue mucobucal dela mandibular,
-        en la región de incisivos o molares.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aLesionesTabaco()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Estomatitis nicotínica</ion-card-title>
-      <p class="card-subtitle">
-        Esta es una forma común de queratosis relacionada con tabaco. La estomatitis nicotínica suele relacionarse con
-        el habito de fumar puro o pipa y existe una correlación positiva entre la gravedad de la enfermedad y la
-        intensidad del habito de fumar.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aEstomatitis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <img src="../../../../assets/imgs/Inicio1.jpeg" />
-      <ion-card-title class="card-title">Queilitis solar</ion-card-title>
-      <p class="card-subtitle">
-        La queilitis solar o actínica representa una degeneración acelerada del tejido del borde rojo labial, en
-        particular labio inferior, como consecuencia de la exposición regular y prolongada a la luz solar.
-      </p>
-    </ion-card-content>
-    <ion-card-content>
-      <div class="content-button">
-        <button ion-button outline round color="green" color="green" (click)="aQueilitis()">ver</button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Estomatitis nicotínica</ion-card-title>
+              <p class="card-subtitle">
+                Esta es una forma común de queratosis relacionada con tabaco. La estomatitis nicotínica suele
+                relacionarse con
+                el hábito de fumar puro o pipa y existe una correlación positiva entre la gravedad de la enfermedad y la
+                intensidad del hábito de fumar.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aEstomatitis(2,12)"
+                  [disabled]="!srv.validateTopic(ch2,11)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/Inicio1.jpeg" />
+              <ion-card-title class="card-title">Queilitis solar</ion-card-title>
+              <p class="card-subtitle">
+                La queilitis solar o actínica representa una degeneración acelerada del tejido del borde rojo labial, en
+                particular labio inferior, como consecuencia de la exposición regular y prolongada a la luz solar.
+              </p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aQueilitis(2,13)"
+                  [disabled]="!srv.validateTopic(ch2,12)">ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -10,6 +10,7 @@
     <ion-title *ngIf="!isSearchbarOpened">
       Búsqueda
     </ion-title>
+    <ion-searchbar (ionInput)="getItems($event)" *ngIf="isSearchbarOpened" placeholder="Buscar" showCancelButton="true" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
 
     <ion-buttons end>
         <!--Poner la funcion de cerrar sesion y volver a home-->
@@ -29,8 +30,6 @@
 
 
 <ion-content padding class="fondo">
-
-    <ion-searchbar (ionInput)="getItems($event)" *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
   
   <ion-list>
     

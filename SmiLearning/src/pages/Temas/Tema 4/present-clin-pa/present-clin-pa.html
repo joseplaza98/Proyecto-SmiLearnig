@@ -16,13 +16,14 @@
 
 
 <ion-content padding class="fondo">
-  
+
   <ion-card>
     <ion-card-content>
       <img src="../../../../assets/imgs/Home4.jpg">
       <ion-card-title class="card-title">Correlación clínico-patológica</ion-card-title>
       <p class="card-subtitle">Establece la asociación entre todos los síntomas referidos por el paciente con los
-        exámenes complementarios, a traves del Gold, estándar determinado por el diagnostico histopatológico.</p>
+        exámenes complementarios, a través del Gold, estándar determinado por el diagnostico histopatológico.
+      </p>
       <br />
       <div class="card-item">
         <p class="card-subtitle"><strong>Palabras Clave:</strong></p>
@@ -32,12 +33,13 @@
     </ion-card-content>
 
     <ion-card-content>
-          <div class="content-button">
-            <ion-buttons start>
-              <button ion-button outline round color="green" (click)="aAnalisisClinCap4()">Aprender</button>
-            </ion-buttons>
-          </div>
-        </ion-card-content>
+      <div class="content-button">
+        <ion-buttons start>
+          <button ion-button outline round color="green" (click)="aAnalisisClinCap4(4,2)"
+            [disabled]="!srv.validateTopic(ch4,1)">Aprender</button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
 
   </ion-card>
 
