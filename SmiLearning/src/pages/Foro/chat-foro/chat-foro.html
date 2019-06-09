@@ -15,7 +15,7 @@
   
   <ion-content #content padding id="content">
     <ion-card *ngFor="let message of messages">
-      <ion-card-header class="card.title">
+      <ion-card-header class="card-title">
         {{message.nombre}} dice:
       </ion-card-header>
       <ion-card-content class="card-subtitle">
@@ -29,7 +29,7 @@
     <ion-toolbar>
       <ion-input placeholder="Responder" [(ngModel)]="message"></ion-input>
       <ion-buttons end>
-        <button ion-button outline icon-right (click)="sendMessage()">
+        <button ion-button round outline icon-right (click)="sendMessage()">
             Enviar
           <ion-icon name="send"></ion-icon>
         </button>
