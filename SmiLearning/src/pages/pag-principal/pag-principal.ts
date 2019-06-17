@@ -10,7 +10,7 @@ import { PresentBibliografiaPage } from '../Bibliografias/present-bibliografia/p
 import { LoginPage } from '../Sesion/login/login';
 import { PresentContAdiPage } from '../Contenido adicional/present-cont-adi/present-cont-adi';
 import { PresentForoPage } from '../Foro/present-foro/present-foro';
-
+import { ToastController } from 'ionic-angular';
 /**
  * Generated class for the PagPrincipalPage page.
  *
@@ -27,7 +27,7 @@ export class PagPrincipalPage {
 
 
 
-  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public loadingCtrl: LoadingController, public authService: AuthService, public alertController: AlertController, public app: App, public srv: ProgressService) {
+  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public loadingCtrl: LoadingController, public authService: AuthService, public alertController: AlertController, public app: App, public srv: ProgressService, public toastCtrl: ToastController) {
   }
 
   aTemario() {
@@ -86,6 +86,11 @@ export class PagPrincipalPage {
 
 
   ionViewDidLoad() {
+      let toast = this.toastCtrl.create({
+        message: 'SmiLearnig le da la bienvenida al curso básico en Periodontología Bucal.',
+        duration: 4000,
+      });
+      toast.present();
     console.log('ionViewDidLoad PagPrincipalPage');
   }
 

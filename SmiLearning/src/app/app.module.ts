@@ -118,7 +118,6 @@ import { EsfaceloPage } from '../pages/Temas/Tema 2/Lesiones/Otros/esfacelo/esfa
 /**Secciones de Tema 2: Patologia bucal */
 import { PresentTem3Page } from '../pages/Temas/Tema 3/present-tem3/present-tem3';
 import { PresentLabExaPage } from '../pages/Temas/Tema 3/present-lab-exa/present-lab-exa';
-import { PresentLabPatobPage } from '../pages/Temas/Tema 3/present-lab-patob/present-lab-patob';
 
 /**Seccion A.1 */
 import { ExamenInterpretacionCortePage } from '../pages/Temas/Tema 3/A.1/examen-interpretacion-corte/examen-interpretacion-corte';
@@ -154,7 +153,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 /**Tema 6 */
-
+import { EvaluacionAnaPatologicaPage } from '../pages/Temas/Tema 6/Evaluaciones/evaluacion-ana-patologica/evaluacion-ana-patologica';
 import { PresentTema6Page } from '../pages/Temas/Tema 6/present-tema6/present-tema6';
 import { Evalucion1T1Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion1-t1/evalucion1-t1';
 import { Evalucion2T2Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion2-t2/evalucion2-t2';
@@ -267,7 +266,6 @@ export const firebaseConfig = {
     /**Tema 3 Laboratorios y examenes */
     PresentTem3Page,
     PresentLabExaPage,
-    PresentLabPatobPage,
 
     /**A.1 */
     ExamenInterpretacionCortePage,
@@ -294,6 +292,7 @@ export const firebaseConfig = {
     CasClinA1Page,
 
     /**Tema 6 */
+    EvaluacionAnaPatologicaPage,
     PresentTema6Page,
     Evalucion1T1Page,
     Evalucion2T2Page,
@@ -405,7 +404,6 @@ export const firebaseConfig = {
     /**Tema 3 Laboratorios y examenes */
     PresentTem3Page,
     PresentLabExaPage,
-    PresentLabPatobPage,
 
     /**A.1 */
     ExamenInterpretacionCortePage,
@@ -431,6 +429,7 @@ export const firebaseConfig = {
     CasClinA1Page,
 
     /**Tema 6 */
+    EvaluacionAnaPatologicaPage,
     PresentTema6Page,
     Evalucion1T1Page,
     Evalucion2T2Page,

@@ -40,12 +40,12 @@ export class LoginPage {
     this.afAuth.auth.signInWithEmailAndPassword(
       this.loginForm.value.email, this.loginForm.value.password)
       .then(() => {
-        this.presentAlert('Bienvenido a SmiLearning', '');
         this.navCtrl.setRoot(PagPrincipalPage);
       })
       .catch((error) => {
         if(error.code == 'auth/wrong-password') {
           this.presentAlert('Error', 'Usuario o contraseña incorrectos');
+          this.loginForm.controls['email'].setValue(null);
           this.loginForm.controls['password'].setValue(null);
         }
       })
@@ -76,13 +76,6 @@ export class LoginPage {
     
     .then((returnedUser) => {
         this.navCtrl.setRoot(PagPrincipalPage);
-        const alert = this.alertCtrl.create({
-          title: 'Bienvenido',
-          subTitle: 'SmiLearnig le da la bienvenida al curso básico en Periodontologia bucal.',
-          buttons: ['OK']
-        });
-        alert.present();
-
       })
       .catch((err) => {
 

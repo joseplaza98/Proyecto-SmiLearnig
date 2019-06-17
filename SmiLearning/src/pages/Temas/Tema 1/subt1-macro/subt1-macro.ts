@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
 import { Subscription } from 'rxjs';
+import { EvaluacionAnaPatologicaPage } from '../../Tema 6/Evaluaciones/evaluacion-ana-patologica/evaluacion-ana-patologica';
 
 /**
  * Generated class for the Subt1MacroPage page.
@@ -42,7 +43,7 @@ export class Subt1MacroPage {
 
   aActividad1(chapter: number, topic: number) {
     this.srv.updateProgress(chapter, topic);
-
+    this.navCtrl.push(EvaluacionAnaPatologicaPage);
   }
 
 
