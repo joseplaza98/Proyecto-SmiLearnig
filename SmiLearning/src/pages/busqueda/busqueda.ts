@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Ayuda4Page } from '../Ayudas/ayuda4/ayuda4';
 
 /**
  * Generated class for the BusquedaPage page.
@@ -22,6 +23,10 @@ export class BusquedaPage {
 
     this.initializeItems();
 
+  }
+
+  aAyuda4(){
+    this.navCtrl.push(Ayuda4Page);
   }
 
   initializeItems() {

@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+/**Ayudas */
+import { Ayuda1Page } from '../pages/Ayudas/ayuda1/ayuda1';
+import { Ayuda2Page } from '../pages/Ayudas/ayuda2/ayuda2';
+import { Ayuda3Page } from '../pages/Ayudas/ayuda3/ayuda3';
+import { Ayuda4Page } from '../pages/Ayudas/ayuda4/ayuda4';
 
 /**Congresos, bibliografias, secuencia y libros */
 
@@ -175,6 +180,12 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
 
+    /**Ayudas */
+    Ayuda1Page,
+    Ayuda2Page,
+    Ayuda3Page,
+    Ayuda4Page,
+
     /**Derechos de uso */
     AboutPage,
     ConsentimientoInfoPage,
@@ -312,6 +323,12 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+
+    /**Ayudas */
+    Ayuda1Page,
+    Ayuda2Page,
+    Ayuda3Page,
+    Ayuda4Page,
 
     /**Derechos de uso */
     AboutPage,

@@ -10,6 +10,7 @@ import { ChapterProgress, ProgressService } from '../../services/progress.servic
 import { Subscription } from 'rxjs';
 
 import { PagPrincipalPage } from '../pag-principal/pag-principal';
+import { Ayuda1Page } from '../Ayudas/ayuda1/ayuda1';
 
 /**
  * Generated class for the TemarioPage page.
@@ -46,6 +47,10 @@ export class TemarioPage {
   subs: Subscription;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public srv: ProgressService) {
+  }
+
+  aAyuda1(){
+    this.navCtrl.push(Ayuda1Page);
   }
 
   accion1() {        

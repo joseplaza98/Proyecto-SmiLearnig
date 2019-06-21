@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 import { Evalucion1T1Page } from '../../Tema 6/Evaluaciones/evalucion1-t1/evalucion1-t1';
 import { Practica1T1Page } from '../../Tema 6/Evaluaciones/practica1-t1/practica1-t1';
 import { TemarioPage } from '../../../temario/temario';
+import { Ayuda2Page } from '../../../Ayudas/ayuda2/ayuda2';
 
 /**
  * Generated class for the AnaPeriodontoPage page.
@@ -56,6 +57,10 @@ export class AnaPeriodontoPage {
 
     this.isAndroid = platform.is('android');
 
+  }
+
+  aAyuda2(){
+    this.navCtrl.push(Ayuda2Page);
   }
 
   aSubt1Macro(chapter: number, topic: number) {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ChatForoPage } from '../chat-foro/chat-foro';
+import { Ayuda3Page } from '../../Ayudas/ayuda3/ayuda3';
 
 /**
  * Generated class for the PresentForoPage page.
@@ -17,6 +18,10 @@ import { ChatForoPage } from '../chat-foro/chat-foro';
 export class PresentForoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  aAyuda3(){
+    this.navCtrl.push(Ayuda3Page);
   }
 
   chatForo(){
