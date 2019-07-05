@@ -1,7 +1,7 @@
 page-evalucion3-t3 {
-    #Iframe-Liason-Sheet {
-        max-width: 760px;
-        max-height: 1200px;
+        #Iframe-Liason-Sheet {
+        max-width: 1024px;
+        max-height: 768px;
         overflow: hidden;
         }
         /* inner wrapper: make responsive */
@@ -16,13 +16,13 @@ page-evalucion3-t3 {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 25%;
         margin: 0;
         padding: 0;
         border: none;
         }
         /* padding-bottom = h/w as a % */
-        .responsive-wrapper-wxh-760x1200 {
+        .responsive-wrapper-wxh-1024x760 {
         padding-bottom: 363.6364%;
         }
         .iframe-border {

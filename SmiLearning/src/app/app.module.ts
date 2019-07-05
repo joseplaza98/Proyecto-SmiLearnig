@@ -143,10 +143,6 @@ import { AnalisisClinCap4Page } from '../pages/Temas/Tema 4/analisis-clin-cap4/a
 import { AnexoA1Cap4Page } from '../pages/Temas/Tema 4/anexo-a1-cap4/anexo-a1-cap4';
 
 
-
-
-
-
 /**Secciones de Tema 5: Presentacion Casos Clínicos */
 import { PresentCasClinPage } from '../pages/Temas/Tema 5/present-cas-clin/present-cas-clin';
 import { SeccionCasClinPage } from '../pages/Temas/Tema 5/seccion-cas-clin/seccion-cas-clin';
@@ -165,6 +161,13 @@ import { Evalucion2T2Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion2-
 import { Evalucion3T3Page } from '../pages/Temas/Tema 6/Evaluaciones/evalucion3-t3/evalucion3-t3';
 import { Practica1T1Page } from '../pages/Temas/Tema 6/Evaluaciones/practica1-t1/practica1-t1';
 import { Evaluacion3_2T3Page } from '../pages/Temas/Tema 6/Evaluaciones/evaluacion3-2-t3/evaluacion3-2-t3';
+
+/**Retos */
+
+import { RetosAnalisisIPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/retos-analisis-i/retos-analisis-i';
+import { RetosAnalisisIiPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/retos-analisis-ii/retos-analisis-ii';
+import { RetosAnalisisIiiPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/retos-analisis-iii/retos-analisis-iii';
+import { RetosAnalisisIvPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/retos-analisis-iv/retos-analisis-iv';
 
 
 export const firebaseConfig = {
@@ -311,6 +314,13 @@ export const firebaseConfig = {
     Practica1T1Page,
     Evaluacion3_2T3Page,
 
+    /**Retos */
+    /**Retos */
+    RetosAnalisisIPage,
+    RetosAnalisisIiPage,
+    RetosAnalisisIiiPage,
+    RetosAnalisisIvPage,
+
   ],
   imports: [
     BrowserModule,
@@ -453,6 +463,13 @@ export const firebaseConfig = {
     Evalucion3T3Page,
     Practica1T1Page,
     Evaluacion3_2T3Page,
+
+    /**Retos */
+    /**Retos */
+    RetosAnalisisIPage,
+    RetosAnalisisIiPage,
+    RetosAnalisisIiiPage,
+    RetosAnalisisIvPage,
   ],
   providers: [
     StatusBar,

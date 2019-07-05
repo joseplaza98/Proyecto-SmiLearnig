@@ -15,22 +15,21 @@ page-queratosis {
     .content-button{
         text-align: center;
     }
-
+    
     .hrv{
         
         height: 2px;
         width: 250%;
         background-color: #04c8c4;
         }
-    
+
    .fondo{
         background:#ECF0F1;
     }
 
-    .table{
-        margin-left: 5%;
-         margin-right: 5%;
-         margin-top: 5%;
+        .table{
+      margin-left: auto !important;
+      margin-right: auto !important; 
     }
 
     .tg {
@@ -49,7 +48,7 @@ page-queratosis {
         border-width: 1px;
         overflow: hidden;
         word-break: normal;
-        border-color: #04c8c4;
+        border-color: #2C3E50;
       }
 
       .tg th {
@@ -61,7 +60,7 @@ page-queratosis {
         border-width: 1px;
         overflow: hidden;
         word-break: normal;
-        border-color: #04c8c4;
+        border-color: #2C3E50;
       }
 
       .tg .tg-0lax {

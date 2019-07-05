@@ -28,10 +28,10 @@ page-disqueratosis {
     }
 
     .table{
-        margin-left: 5%;
-         margin-right: 5%;
-         margin-top: 5%;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
+    
 
     .tg {
         border-collapse: collapse;
@@ -66,13 +66,13 @@ page-disqueratosis {
 
       .tg .tg-0lax {
         text-align: left;
-        vertical-align: top
+        vertical-align: top;
       }
 
       .tg .tg-0pky {
         border-color: inherit;
         text-align: left;
-        vertical-align: top
+        vertical-align: top;
       }
 
 }
