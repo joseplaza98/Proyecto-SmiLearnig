@@ -8,6 +8,7 @@ import { Evaluacion3_2T3Page } from '../../Tema 6/Evaluaciones/evaluacion3-2-t3/
 
 import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
 import { Subscription } from 'rxjs';
+import { RetosAnalisisIiiPage } from '../../Tema 6/Evaluaciones/Retos/retos-analisis-iii/retos-analisis-iii';
 
 /**
  * Generated class for the PresentTem3Page page.
@@ -29,7 +30,7 @@ export class PresentTem3Page {
   ch3: ChapterProgress = { progress: 0, topics: [] };
   ch4: ChapterProgress = { progress: 0, topics: [] };
   ch5: ChapterProgress = { progress: 0, topics: [] };
-  
+
 
   subs: Subscription;
 
@@ -46,8 +47,13 @@ export class PresentTem3Page {
     this.navCtrl.push(LabPatobucalPage);
   }
 
-  aTemario(){
+  aTemario() {
     this.navCtrl.setRoot(TemarioPage);
+  }
+
+  aRetoAnalisis3(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
+    this.navCtrl.push(RetosAnalisisIiiPage);
   }
 
   aEva3T3a(chapter: number, topic: number) {

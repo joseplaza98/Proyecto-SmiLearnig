@@ -11,7 +11,7 @@
     <ion-buttons end>
       <!--Poner la funcion de cerrar sesion y volver a home-->
       <button ion-button (click)="aTemario()">
-        <ion-chip style="background: #ffff">
+        <ion-chip color="light">
           <ion-avatar slot="end">
             <img src="../../../../assets/icon/home.png">
           </ion-avatar>
@@ -99,6 +99,21 @@
               </div>
             </ion-card-content>
           </ion-card>
+
+          <ion-card>
+              <ion-card-content>
+                  <img src="../../../../assets/imgs/cap1Micro.jpg" />
+                <ion-card-title class="card-title">Actividad de retro alimentación</ion-card-title>
+                <p class="card-subtitle">Lea y responda según corresponda, las preguntas del siguiente quiz
+                  preparatorio.</p>
+              </ion-card-content>
+              <ion-card-content>
+                <div class="content-button">
+                  <button ion-button outline round color="green" (click)="aRetoAnalisis2(2,23)"
+                    [disabled]="!srv.validateTopic(ch2,22)">Realizar</button>
+                </div>
+              </ion-card-content>
+            </ion-card>
         </div>
       </ion-col>
       <ion-col size-md="3" push-md="3">
@@ -110,8 +125,8 @@
             </ion-card-content>
             <ion-card-content>
               <div class="content-button">
-                <button ion-button outline round color="green" (click)="apresnetOtros(2,23)"
-                  [disabled]="!srv.validateTopic(ch2,22)">Ver</button>
+                <button ion-button outline round color="green" (click)="apresentOtros(2,24)"
+                  [disabled]="!srv.validateTopic(ch2,23)">Ver</button>
               </div>
             </ion-card-content>
           </ion-card>
@@ -133,8 +148,8 @@
             </ion-card-content>
             <ion-card-content>
               <div class="content-button">
-                <button ion-button outline round color="green" (click)="aEva2T2(2,30)"
-                  [disabled]="!srv.validateTopic(ch2,29)">Evaluación</button>
+                <button ion-button outline round color="green" (click)="aEva2T2(2,31)"
+                  [disabled]="!srv.validateTopic(ch2,30)">Evaluación</button>
               </div>
             </ion-card-content>
           </ion-card>

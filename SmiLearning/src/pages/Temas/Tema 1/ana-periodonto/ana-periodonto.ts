@@ -14,6 +14,7 @@ import { Evalucion1T1Page } from '../../Tema 6/Evaluaciones/evalucion1-t1/evaluc
 import { Practica1T1Page } from '../../Tema 6/Evaluaciones/practica1-t1/practica1-t1';
 import { TemarioPage } from '../../../temario/temario';
 import { Ayuda2Page } from '../../../Ayudas/ayuda2/ayuda2';
+import { RetosAnalisisIPage } from '../../Tema 6/Evaluaciones/Retos/retos-analisis-i/retos-analisis-i';
 
 /**
  * Generated class for the AnaPeriodontoPage page.
@@ -91,6 +92,11 @@ export class AnaPeriodontoPage {
   aCaso3(chapter: number, topic: number) {
     this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(CasosT1_3Page);
+  }
+
+  aRetoAnalisis1(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
+    this.navCtrl.push(RetosAnalisisIPage);
   }
 
   aEva1T1(chapter: number, topic: number) {

@@ -11,7 +11,7 @@
     <ion-buttons end>
       <!--Poner la funcion de cerrar sesion y volver a home-->
       <button ion-button (click)="aTemario()">
-        <ion-chip style="background: #ffff">
+        <ion-chip color="light">
           <ion-avatar slot="end">
             <img src="../../../../assets/icon/home.png">
           </ion-avatar>
@@ -31,7 +31,7 @@
       <ion-segment-button value="micro" (click)="progress(1,11)" [disabled]="!srv.validateTopic(ch1, 10)">
         Micro
       </ion-segment-button>
-      <ion-segment-button value="otros" (click)="progress(1,18)" [disabled]="!srv.validateTopic(ch1, 17)">
+      <ion-segment-button value="otros" (click)="progress(1,19)" [disabled]="!srv.validateTopic(ch1, 18)">
         Más temas
       </ion-segment-button>
     </ion-segment>
@@ -262,8 +262,10 @@
             <div>
               <ion-card>
                 <ion-card-content>
-                  <ion-card-title>¿Que es?</ion-card-title>
-                  <p class="card.subtitle">Descripcion de que es.</p>
+                  <ion-card-title>Epitelio sulcular</ion-card-title>
+                  <p class="card.subtitle">Es la parte paraqueratinizada del epitelio gingival que cubre la pared de
+                    tejido blando del surco gingival, extendiéndose desde el margen gingival hasta la línea de inserción
+                    del epitelio en el diente.</p>
                   <br />
                   <img class="card-img" src="../../../../assets/imgs/Figuras patología/Figura 1-12a.jpg">
                 </ion-card-content>
@@ -272,15 +274,16 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      
+
       <ion-grid>
         <ion-row>
           <ion-col size-md="6" push-md="3">
             <div>
               <ion-card>
                 <ion-card-content>
-                  <ion-card-title class="card-title">¿Que es?</ion-card-title>
-                  <p class="card.subtitle">Descripcion de que es.</p>
+                  <ion-card-title class="card-title">Epitelio bucal</ion-card-title>
+                  <p class="card.subtitle">Es el tejido constituido por células íntimamente unidas, planas o
+                    prismáticas, que recubre la superficie externa del cuerpo y de ciertos órganos interiores.</p>
                   <br />
                   <img src="../../../../assets/imgs/Figuras patología/Figura 1-12b.jpg">
                 </ion-card-content>
@@ -292,7 +295,7 @@
 
       <ion-grid>
         <ion-row>
-          <ion-col size-md="12" push-md="12">
+          <ion-col size-md="6" push-md="3">
             <div>
               <ion-card>
                 <ion-card-content>
@@ -332,7 +335,26 @@
                   </ion-list>
                 </ion-card-content>
               </ion-card>
-              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size-md="6" push-md="3">
+            <div>
+              <ion-card>
+                <ion-card-content>
+                  <img src="../../../../assets/imgs/cap1Micro2.jpg" />
+                  <ion-card-title class="card-title">Actividad de retro alimentación</ion-card-title>
+                  <p class="card-subtitle">Lea y responda según corresponda, las preguntas del siguiente quiz
+                    preparatorio.</p>
+                </ion-card-content>
+                <ion-card-content>
+                  <div class="content-button">
+                    <button ion-button outline round color="green" (click)="aRetoAnalisis1(1,18)"
+                      [disabled]="!srv.validateTopic(ch1, 17)">Realizar</button>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -379,8 +401,8 @@
                 </ion-card-content>
                 <ion-card-content>
                   <div class="content-button">
-                    <button ion-button outline round color="green" (click)="accion6(1,19)"
-                      [disabled]="!srv.validateTopic(ch1, 18)">
+                    <button ion-button outline round color="green" (click)="accion6(1,20)"
+                      [disabled]="!srv.validateTopic(ch1, 19)">
                       {{ !ocultar6 ? 'Ver más' : 'Ver Menos' }}
                     </button>
                   </div>
@@ -423,12 +445,12 @@
                 </ion-card-content>
                 <ion-card-content>
                   <div class="content-button">
-                    <button ion-button outline round color="green" (click)="accion7(1,20)"
-                      [disabled]="!srv.validateTopic(ch1, 19)">
+                    <button ion-button outline round color="green" (click)="accion7(1,21)"
+                      [disabled]="!srv.validateTopic(ch1, 20)">
                       {{ !ocultar7 ? 'Ver más' : 'Ver Menos' }}
                     </button>
-                    <button ion-button outline round color="green" (click)="aLiagPeriodoncial(1,21)"
-                      [disabled]="!srv.validateTopic(ch1, 20)">Ver Tema</button>
+                    <button ion-button outline round color="green" (click)="aLiagPeriodoncial(1,22)"
+                      [disabled]="!srv.validateTopic(ch1, 21)">Ver Tema</button>
                   </div>
                 </ion-card-content>
               </ion-card>
@@ -473,12 +495,12 @@
                 </ion-card-content>
                 <ion-card-content>
                   <div class="content-button">
-                    <button ion-button outline round color="green" (click)="accion8(1,25)"
-                      [disabled]="!srv.validateTopic(ch1, 24)">
+                    <button ion-button outline round color="green" (click)="accion8(1,26)"
+                      [disabled]="!srv.validateTopic(ch1, 25)">
                       {{ !ocultar8 ? 'Ver más' : 'Ver Menos' }}
                     </button>
-                    <button ion-button outline round color="green" (click)="aTipCement(1,26)"
-                      [disabled]="!srv.validateTopic(ch1, 25)">Ver Tema</button>
+                    <button ion-button outline round color="green" (click)="aTipCement(1,27)"
+                      [disabled]="!srv.validateTopic(ch1, 26)">Ver Tema</button>
                   </div>
                 </ion-card-content>
               </ion-card>
@@ -519,8 +541,8 @@
                 </ion-card-content>
                 <ion-card-content>
                   <div class="content-button">
-                    <button ion-button outline round color="green" (click)="accion9(1,27)"
-                      [disabled]="!srv.validateTopic(ch1, 26)">
+                    <button ion-button outline round color="green" (click)="accion9(1,28)"
+                      [disabled]="!srv.validateTopic(ch1, 27)">
                       {{ !ocultar9 ? 'Ver más' : 'Ver Menos' }}
                     </button>
                   </div>
@@ -565,10 +587,10 @@
                 </ion-card-content>
                 <ion-card-content>
                   <div class="content-button">
-                    <button ion-button outline round color="green" (click)="aEva1T1(1,28)"
-                      [disabled]="!srv.validateTopic(ch1, 27)">Parte I</button>
-                    <button ion-button outline round color="green" (click)="aPracti1T1(1,29)"
-                      [disabled]="!srv.validateTopic(ch1, 28)">Parte II</button>
+                    <button ion-button outline round color="green" (click)="aEva1T1(1,29)"
+                      [disabled]="!srv.validateTopic(ch1, 28)">Parte I</button>
+                    <button ion-button outline round color="green" (click)="aPracti1T1(1,30)"
+                      [disabled]="!srv.validateTopic(ch1, 29)">Parte II</button>
                   </div>
                 </ion-card-content>
               </ion-card>
@@ -583,7 +605,9 @@
 </ion-content>
 
 <ion-footer>
-    <ion-fab right bottom>
-      <button ion-fab color="paua" (click)="aAyuda2()"><ion-icon name="md-help"></ion-icon></button>
-      </ion-fab>
-  </ion-footer>
+  <ion-fab right bottom>
+    <button ion-fab color="paua" (click)="aAyuda2()">
+      <ion-icon name="md-help"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-footer>

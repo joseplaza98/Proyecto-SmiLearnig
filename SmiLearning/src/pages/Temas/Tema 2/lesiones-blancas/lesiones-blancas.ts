@@ -9,6 +9,7 @@ import { TemarioPage } from '../../../temario/temario';
 
 import { ChapterProgress, ProgressService } from '../../../../services/progress.service';
 import { Subscription } from 'rxjs';
+import { RetosAnalisisIiPage } from '../../Tema 6/Evaluaciones/Retos/retos-analisis-ii/retos-analisis-ii';
 
 /**
  * Generated class for the LesionesBlancasPage page.
@@ -50,7 +51,13 @@ export class LesionesBlancasPage {
     this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentLesNoEpitPage);
   }
-  apresnetOtros(chapter: number, topic: number) {
+
+  aRetoAnalisis2(chapter: number, topic: number) {
+    this.srv.updateProgress(chapter, topic);
+    this.navCtrl.push(RetosAnalisisIiPage);
+  }
+
+  apresentOtros(chapter: number, topic: number) {
     this.srv.updateProgress(chapter, topic);
     this.navCtrl.push(PresentOtrasPage);
   }

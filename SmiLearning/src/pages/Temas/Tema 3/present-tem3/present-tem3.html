@@ -87,6 +87,22 @@
               </div>
             </ion-card-content>
           </ion-card>
+
+          <ion-card>
+              <ion-card-content>
+                  <img src="../../../../assets/imgs/cap1Micro.jpg" />
+                <ion-card-title class="card-title">Actividad de retro alimentación</ion-card-title>
+                <p class="card-subtitle">Lea y responda según corresponda, las preguntas del siguiente quiz
+                  preparatorio.</p>
+              </ion-card-content>
+              <ion-card-content>
+                <div class="content-button">
+                  <button ion-button outline round color="green" (click)="aRetoAnalisis3(3,8)"
+                    [disabled]="!srv.validateTopic(ch3,7)">Realizar</button>
+                </div>
+              </ion-card-content>
+            </ion-card>
+
         </div>
       </ion-col>
     </ion-row>
@@ -105,10 +121,10 @@
             </ion-card-content>
             <ion-card-content>
               <div class="content-button">
-                <button ion-button outline round color="green" (click)="aEva3T3a(3,8)"
-                  [disabled]="!srv.validateTopic(ch3,7)">Parte I</button>
-                <button ion-button outline round color="green" (click)="aEva3T3b(3,9)"
-                  [disabled]="!srv.validateTopic(ch3,8)">Parte II</button>
+                <button ion-button outline round color="green" (click)="aEva3T3a(3,9)"
+                  [disabled]="!srv.validateTopic(ch3,8)">Parte I</button>
+                <button ion-button outline round color="green" (click)="aEva3T3b(3,10)"
+                  [disabled]="!srv.validateTopic(ch3,9)">Parte II</button>
               </div>
             </ion-card-content>
           </ion-card>

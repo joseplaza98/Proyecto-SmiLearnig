@@ -73,6 +73,7 @@
           </ion-card>
         </div>
       </ion-col>
+
       <ion-col size-md="3" push-md="3">
         <div>
           <ion-card>
@@ -125,6 +126,25 @@
               </div>
             </ion-card-content>
 
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
+              <img src="../../../../assets/imgs/cap1Micro.jpg" />
+              <ion-card-title class="card-title">Actividad de retro alimentación</ion-card-title>
+              <p class="card-subtitle">Lea y responda según corresponda, las preguntas del siguiente quiz
+                preparatorio.</p>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="aRetoAnalisis4(4,6)"
+                  [disabled]="!srv.validateTopic(ch4,5)">Realizar</button>
+              </div>
+            </ion-card-content>
           </ion-card>
         </div>
       </ion-col>

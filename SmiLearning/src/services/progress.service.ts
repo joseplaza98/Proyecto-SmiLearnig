@@ -3,10 +3,10 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Observable, Subscriber } from "rxjs";
 
-const TOPIC_CHAPTER_1 = 29;
-const TOPIC_CHAPTER_2 = 30;
-const TOPIC_CHAPTER_3 = 9;
-const TOPIC_CHAPTER_4 = 5;
+const TOPIC_CHAPTER_1 = 30;
+const TOPIC_CHAPTER_2 = 31;
+const TOPIC_CHAPTER_3 = 10;
+const TOPIC_CHAPTER_4 = 6;
 const TOPIC_CHAPTER_5 = 3;
 
 @Injectable()

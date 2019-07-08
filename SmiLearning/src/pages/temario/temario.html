@@ -11,7 +11,7 @@
     <ion-buttons end>
       <!--Poner la funcion de cerrar sesion y volver a home-->
       <button ion-button (click)="aPagPrinc()">
-        <ion-chip style="background: #ffff">
+        <ion-chip color="light">
           <ion-avatar slot="end">
             <img src="../../assets/icon/home.png">
           </ion-avatar>
@@ -90,7 +90,7 @@
                   {{ !ocultar2 ? 'Ver Avance' : 'Ocultar Avance' }}
                 </button>
                 <button ion-button outline round color="green" round style="align-content: flex"
-                  (click)="aPatoBucal(2,1)" [disabled]="!srv.validateTopic(ch1, 29)">Ver Tema</button>
+                  (click)="aPatoBucal(2,1)" [disabled]="!srv.validateTopic(ch1, 30)">Ver Tema</button>
               </div>
             </ion-card-content>
           </ion-card>
@@ -124,7 +124,7 @@
                   {{ !ocultar3 ? 'Ver Avance' : 'Ocultar Avance' }}
                 </button>
                 <button ion-button outline round color="green" round style="align-content: flex"
-                  (click)="aPresentTem3(3,1)" [disabled]="!srv.validateTopic(ch2,30)">Ver Tema</button>
+                  (click)="aPresentTem3(3,1)" [disabled]="!srv.validateTopic(ch2,31)">Ver Tema</button>
               </div>
             </ion-card-content>
           </ion-card>
@@ -164,7 +164,7 @@
                   {{ !ocultar4 ? 'Ver Avance' : 'Ocultar Avance' }}
                 </button>
                 <button ion-button outline round color="green" round style="align-content: flex"
-                  (click)="aPresentClinPa(4,1)" [disabled]="!srv.validateTopic(ch3,9)">Ver Tema</button>
+                  (click)="aPresentClinPa(4,1)" [disabled]="!srv.validateTopic(ch3,10)">Ver Tema</button>
               </div>
             </ion-card-content>
 
@@ -197,7 +197,7 @@
                   {{ !ocultar5 ? 'Ver Avance' : 'Ocultar Avance' }}
                 </button>
                 <button ion-button outline round color="green" round style="align-content: flex"
-                  (click)="aPresentCasClin(5,1)" [disabled]="!srv.validateTopic(ch4,5)">Ver Tema</button>
+                  (click)="aPresentCasClin(5,1)" [disabled]="!srv.validateTopic(ch4,6)">Ver Tema</button>
               </div>
             </ion-card-content>
           </ion-card>
