@@ -106,6 +106,22 @@
 
           <ion-card>
             <ion-card-content>
+              <ion-card-title class="card-title">Otras lesiones blancas</ion-card-title>
+            </ion-card-content>
+            <ion-card-content>
+              <div class="content-button">
+                <button ion-button outline round color="green" (click)="apresentOtros(2,24)"
+                  [disabled]="!srv.validateTopic(ch2,23)">Ver</button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+        </div>
+      </ion-col>
+      <ion-col size-md="3" push-md="3">
+        <div>
+          <ion-card>
+            <ion-card-content>
               <img src="../../../../assets/imgs/EjerRetro1.jpg" />
               <ion-card-title class="card-title">Actividad de retro alimentación</ion-card-title>
               <p class="card-subtitle">Lea y responda según corresponda, las preguntas del siguiente quiz
@@ -115,21 +131,6 @@
               <div class="content-button">
                 <button ion-button outline round color="green" (click)="aRetoAnalisis2(2,23)"
                   [disabled]="!srv.validateTopic(ch2,22)">Realizar</button>
-              </div>
-            </ion-card-content>
-          </ion-card>
-        </div>
-      </ion-col>
-      <ion-col size-md="3" push-md="3">
-        <div>
-          <ion-card>
-            <ion-card-content>
-              <ion-card-title class="card-title">Otras lesiones blancas</ion-card-title>
-            </ion-card-content>
-            <ion-card-content>
-              <div class="content-button">
-                <button ion-button outline round color="green" (click)="apresentOtros(2,24)"
-                  [disabled]="!srv.validateTopic(ch2,23)">Ver</button>
               </div>
             </ion-card-content>
           </ion-card>
