@@ -169,6 +169,8 @@ import { RetosAnalisisIiPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/re
 import { RetosAnalisisIiiPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/retos-analisis-iii/retos-analisis-iii';
 import { RetosAnalisisIvPage } from '../pages/Temas/Tema 6/Evaluaciones/Retos/retos-analisis-iv/retos-analisis-iv';
 
+/**BibliotecaCard*/
+import {BibliotecaPage} from '../pages/biblioteca/biblioteca';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyD6AgQGFO9KMRQIU9sQvLHn84PgEHbGYHk",
@@ -321,6 +323,9 @@ export const firebaseConfig = {
     RetosAnalisisIiiPage,
     RetosAnalisisIvPage,
 
+    /**BibliotecaCard */
+    BibliotecaPage,
+
   ],
   imports: [
     BrowserModule,
@@ -470,6 +475,9 @@ export const firebaseConfig = {
     RetosAnalisisIiPage,
     RetosAnalisisIiiPage,
     RetosAnalisisIvPage,
+
+    /**BibliotecaCard */
+    BibliotecaPage,
   ],
   providers: [
     StatusBar,

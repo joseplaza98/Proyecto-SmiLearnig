@@ -28,7 +28,7 @@ export class AnexoA1Cap4Page {
 
     const alert = this.alertCtrl.create({
       title: 'Recomendación',
-      subTitle: 'Active la rotacion de pantalla y gire su dispositivo.',
+      subTitle: 'Active la rotacion de pantalla en su dispositivo para poder observar el contenido de mejor modo.',
       buttons: ['OK']
     });
     alert.present();

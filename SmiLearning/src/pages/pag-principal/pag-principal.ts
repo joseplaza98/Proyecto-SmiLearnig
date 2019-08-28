@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, LoadingController, AlertController, App } from 'ionic-angular';
-import { BusquedaPage } from '../busqueda/busqueda';
 import { TemarioPage } from '../temario/temario';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthService } from '../../services/auth.service';
@@ -11,6 +10,9 @@ import { LoginPage } from '../Sesion/login/login';
 import { PresentContAdiPage } from '../Contenido adicional/present-cont-adi/present-cont-adi';
 import { PresentForoPage } from '../Foro/present-foro/present-foro';
 import { ToastController } from 'ionic-angular';
+import { BibliotecaPage } from '../biblioteca/biblioteca';
+
+
 /**
  * Generated class for the PagPrincipalPage page.
  *
@@ -34,8 +36,8 @@ export class PagPrincipalPage {
     this.navCtrl.push(TemarioPage);
   }
 
-  aBusqueda() {
-    this.navCtrl.push(BusquedaPage);
+  aBibliotecaGrid() {
+    this.navCtrl.push(BibliotecaPage);
   }
 
   aPresentCasClin() {
